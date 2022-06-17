@@ -1,0 +1,1 @@
+backtracking crt1 si crt2 la sortari

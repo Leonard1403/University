@@ -1,0 +1,6 @@
+1;'Atomic Habits';"O carte extrem de practica si utila. James Clear \nextrage informatiile fundamentale despre formarea obiceiurilor, astfel ca tu sa poti realiza mai \nmult concentrandu-te pe mai putine lucruri";"James Clear"
+2;'Tata Bogat';"Principalul motiv pentru care oamenii se lupta cu dificultatile \nfinanciare este acela ca au trecut prin scoala fara sa invete nimic despre bani. Rezultatul este ca invata sa lucreze pentru bani dar nu invata niciodata sa puna\nbanii sa actioneze pentru ei.";"Robert T. Kiyosaki"
+3;'Arta subtila a nepasarii';'In acest ghid revolutionar, definitoriu pentru o intreaga'\ngeneratie, autorul ne invata ca, pentru a fi fericiti, trebuie sa renuntam la a fi "pozitivi" mereu si trebuie,\nin schimb, sa ne perfectionam in invingerea obstacolelor.';"Mark Manson"
+4;'Pas cu pas';'Am adunat in aceasta carte momente din viata publica, incercand sa refac, din ceea ce a selectat memoria,\ntraseul profesional care m-a adus de la catedra de fizica la ipostaza de candidat pentru presedintie.\nAm inclus in ea si lucruri personale, dar nu am facut o neaparat pentru a raspunde curiozitatii celorlalti.';"Klaus Iohannis"
+99;'da';'da';'da'
+210;'Nu';'NU';'Nu'
