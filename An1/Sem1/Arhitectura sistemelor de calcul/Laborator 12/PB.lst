@@ -1,0 +1,92 @@
+     1                                  ;Se da un sir de quadworduri definit in data segment
+     2                                  ;elementele sirului sunt in baza16
+     3                                  ; a)sa se printeze byti care compun quadwordurile din sir
+     4                                  ; b)sa se identifice wordurile care au ultima cifra egala cu constanta k 
+     5                                  ;   definita in segmentul de date
+     6                                  ;   sa se salveze aceste worduri in sirul d
+     7                                  ; c)sa se identifice double wordurile care sunt cuprinse in intervalul
+     8                                  ;   [AAA , FFFF]
+     9                                  ;   sa se determine numarul double wordurilor din acest intervl; sa se afiseze
+    10                                  ;   acest numar in baza10 in fisierul iesire.txt
+    11                                  
+    12                                  
+    13                                  
+    14                                  bits 32 ; assembling for the 32 bits architecture
+    15                                  
+    16                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+    17                                  global start        
+    18                                  
+    19                                  ; declare external functions needed by our program
+    20                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+    21                                  extern printf
+    22                                  
+    23                                  import printf msvcrt.dll
+    24                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    25                                  
+    26                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    27                                  
+    28                                  ; our data is declared here (the variables needed by our program)
+    29                                  segment data use32 class=data
+    30                                      ; ...
+    31 00000000 481200000000000089-         sir dq 0x1248 , 0x1289 , 0x12 , 0x875 , 0x129, 0x8325 , 0x0AABC , 0xABCBACACBA , 0x9
+    31 00000009 120000000000001200-
+    31 00000012 000000000000750800-
+    31 0000001B 000000000029010000-
+    31 00000024 000000002583000000-
+    31 0000002D 000000BCAA00000000-
+    31 00000036 0000BAACACCBAB0000-
+    31 0000003F 000900000000000000 
+    32                                      len_sir equ ($-sir)/8
+    33 00000048 25780A                      formathex db '%x' , 10
+    34 0000004B 0A                          format_n db '' , 10
+    35 0000004C 0000                        copie dw 0
+    36 0000004E 0000                        copie2 dw 0
+    37 00000050 00000000                    a dd 0
+    38 00000054 00000000                    b dd 0 
+    39                                  ; our code starts here
+    40                                  segment code use32 class=code
+    41                                      start:
+    42                                          ; ...
+    43 00000000 B909000000                      mov ecx , len_sir
+    44 00000005 BE[00000000]                    mov esi , sir
+    45 0000000A BB08000000                      mov ebx , 8
+    46                                          
+    47 0000000F FC                              CLD
+    48                                          repeta:
+    49 00000010 890D[4C000000]                      mov [copie] , ecx
+    50 00000016 B908000000                          mov ecx , 8
+    51                                              ;bucla:
+    52                                              ;    mov [copie2] , ecx
+    53                                              ;    lodsb
+    54                                              ;    cbw 
+    55                                              ;    cwd
+    56                                              ;    push dword eax
+    57                                              ;    push dword formathex
+    58                                              ;    call [printf]
+    59                                              ;    add esp, 4*2
+    60                                              ;    ;mov edx , eax 
+    61                                              ;    ;lodsd
+    62                                              ;    mov ecx , [copie2]
+    63                                              ;loop bucla
+    64 0000001B AD                                  lodsd
+    65 0000001C 89C2                                mov edx , eax
+    66 0000001E AD                                  lodsd
+    67                                              
+    68 0000001F A3[50000000]                        mov [a] , eax
+    69 00000024 8915[54000000]                      mov [b] , edx
+    70                                              
+    71 0000002A FF35[50000000]                      push dword[a]
+    72 00000030 68[48000000]                        push dword formathex
+    73 00000035 FF15[00000000]                      call [printf]
+    74 0000003B 83C408                              add esp , 4*2
+    75                                              
+    76 0000003E FF35[54000000]                      push dword[b]
+    77 00000044 68[48000000]                        push dword formathex
+    78 00000049 FF15[00000000]                      call [printf]
+    79 0000004F 83C408                              add esp , 4*2
+    80                                              
+    81 00000052 8B0D[4C000000]                      mov ecx , [copie]
+    82 00000058 E2B6                            loop repeta
+    83                                          ; exit(0)
+    84 0000005A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    85 0000005C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

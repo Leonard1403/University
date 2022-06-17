@@ -1,0 +1,33 @@
+     1                                  ; a- byte 
+     2                                  ; b- doublword 
+     3                                  ; signed
+     4                                  ; a/b-
+     5                                  
+     6                                  bits 32 ; assembling for the 32 bits architecture
+     7                                  
+     8                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     9                                  global start        
+    10                                  
+    11                                  ; declare external functions needed by our program
+    12                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+    13                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    14                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    15                                  
+    16                                  ; our data is declared here (the variables needed by our program)
+    17                                  segment data use32 class=data
+    18                                      ; ...
+    19 00000000 01                          a db 1
+    20 00000001 01000000                    b dd 1
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24                                          ; ...
+    25 00000000 A0[00000000]                    mov al , [a]
+    26 00000005 6698                            cbw
+    27 00000007 98                              cwde
+    28 00000008 99                              cdq
+    29                                          idiv b
+    29          ******************       error: invalid combination of opcode and operands
+    30                                          ; exit(0)
+    31 00000009 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    32 0000000B FF15[00000000]                  call    [exit]       ; call exit to terminate the program
