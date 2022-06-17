@@ -1,0 +1,21 @@
+adaugare 
+15 2000 Miere
+15 124 avion
+19 200 Apartament
+20 10 Orez
+9 120 GOGOSI
+8 90 Apartament
+17 12587 Masina
+17 18 Apartament
+
+
+stergere 0 0 NULL
+Comanda: 1 
+Ziua: 15
+
+
+
+
+
+afisare 0 0 Null
+iesire 0 0 NULL

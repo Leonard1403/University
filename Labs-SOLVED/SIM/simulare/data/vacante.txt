@@ -1,0 +1,4 @@
+2, La Ionel, munte, 85
+4, Seaside Hotel, mare, 125
+12, River Edge Resort, aproape de munte, 330
+20, Omar Hotel, mare, 100
