@@ -1,0 +1,5 @@
+﻿  service.c
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\Problema5 - Dinamic\service.c(162,13): warning C4101: 'm': unreferenced local variable
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\Problema5 - Dinamic\service.c(203,64): warning C4020: 'modifyTranzactie': too many actual parameters
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\Problema5 - Dinamic\service.c(205,63): warning C4020: 'modifyTranzactie': too many actual parameters
+  Problema5 - Dinamic.vcxproj -> E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\Debug\Problema5 - Dinamic.exe

@@ -1,0 +1,21 @@
+[2022-04-08 11:59:10] [info] Start Program:
+Path:"E:\\Facultate\\An1\\Sem2\\Programare orientata pe obiect\\Teme\\Lab2-4\\Problema5 - Dinamic\\x64\\Debug\\Problema5 - Dinamic.exe"
+Arguments:
+Working directory: "E:\\Facultate\\An1\\Sem2\\Programare orientata pe obiect\\Teme\\Lab2-4\\Problema5 - Dinamic\\Problema5 - Dinamic\\"
+Modules: Selected: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\x64\Debug\Problema5 - Dinamic.exe Excluded: 
+Sources: Selected: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\Problema5 - Dinamic Excluded: ui.c my_utils.c 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\balin\AppData\Local\Temp\4yzx0r5k.shi 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-08 11:59:10] [info] Module: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\x64\Debug\Problema5 - Dinamic.exe is selected because it matches selected pattern: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5 - Dinamic\x64\Debug\Problema5 - Dinamic.exe
+[2022-04-08 11:59:11] [info] ----------------------------------------------------
+[2022-04-08 11:59:11] [info] Coverage binary generated in file: C:\Users\balin\AppData\Local\Temp\4yzx0r5k.shi
+[2022-04-08 11:59:11] [info] ----------------------------------------------------

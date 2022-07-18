@@ -1,0 +1,9 @@
+﻿  MyList.c
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Problema5\MyList.c(106,13): warning C4101: 'm': unreferenced local variable
+  Tranzactie.c
+  service.c
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Problema5\service.c(108,13): warning C4101: 'm': unreferenced local variable
+  ui.c
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Problema5\ui.c(13,12): warning C4013: 'testDelete' undefined; assuming extern returning int
+  Generating Code...
+  Problema5.vcxproj -> E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\x64\Debug\Problema5.exe

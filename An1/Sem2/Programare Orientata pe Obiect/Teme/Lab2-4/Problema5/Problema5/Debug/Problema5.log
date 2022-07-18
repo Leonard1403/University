@@ -1,0 +1,4 @@
+﻿  service.c
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Problema5\service.c(34,1): warning C4029: declared formal parameter list different from definition
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Problema5\service.c(90,13): warning C4101: 'm': unreferenced local variable
+  Problema5.vcxproj -> E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab2-4\Problema5\Debug\Problema5.exe
