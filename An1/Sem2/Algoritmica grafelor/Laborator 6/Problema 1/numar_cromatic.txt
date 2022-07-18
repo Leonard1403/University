@@ -1,0 +1,5 @@
+1 - petersen, numar cromatic 3, index cromatic 4
+2 - tutte graph, numar cromatic 3
+3 - pappus graph, nr cromatic 2, n=18, m=27
+4 - k_10, nr cromatic 10, n=10, m=45
+5 - K_10_5, graf bipartit complet, n=15, m=50

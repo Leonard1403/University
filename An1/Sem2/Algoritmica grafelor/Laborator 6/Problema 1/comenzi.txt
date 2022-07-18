@@ -1,0 +1,2 @@
+g++ main.cpp -o aplicatie.exe
+aplicatie 1-in.txt 1-out.txt
