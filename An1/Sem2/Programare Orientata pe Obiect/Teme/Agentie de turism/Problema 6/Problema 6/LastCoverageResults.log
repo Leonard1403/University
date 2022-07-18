@@ -1,0 +1,21 @@
+[2022-05-06 11:34:54] [info] Start Program:
+Path:"E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\x64\Debug\Problema 6.exe"
+Arguments:
+Working directory: "E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\Problema 6\"
+Modules: Selected: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\x64\Debug\Problema 6.exe Excluded: 
+Sources: Selected: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\Problema 6 Excluded: main.cpp UI.cpp 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\balin\AppData\Local\Temp\us5ret5f.d5u 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-05-06 11:34:54] [info] Module: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\x64\Debug\Problema 6.exe is selected because it matches selected pattern: E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7\Problema 6\x64\Debug\Problema 6.exe
+[2022-05-06 11:34:56] [info] ----------------------------------------------------
+[2022-05-06 11:34:56] [info] Coverage binary generated in file: C:\Users\balin\AppData\Local\Temp\us5ret5f.d5u
+[2022-05-06 11:34:56] [info] ----------------------------------------------------

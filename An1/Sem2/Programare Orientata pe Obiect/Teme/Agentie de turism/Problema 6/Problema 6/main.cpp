@@ -1,0 +1,37 @@
+#include "UI.h"
+#include "Service.h"
+#include <iostream>
+#include <fstream>
+using std::cout;
+using std::endl;
+
+void testAll() {
+	//Turism.cpp
+	testeDomain();
+	cout << "Finished domain tests." << endl;
+	testeRepo();
+	cout << "Finished repo tests." << endl;
+	testAddService();
+	testService();
+	cout << "Finished service test." << endl;
+	teste_wishlist();
+	cout << "Finished wishlist test." << endl;
+	
+}
+
+void startApp() {
+	TurismRepository repo;
+	//TurismRepositoryFile repo{ "E:\\Facultate\\An1\\Sem2\\Programare orientata pe obiect\\Teme\\Agentie de turism\\Problema 6\\Problema 6\\oferte.txt" };
+	TurismValidator val;
+	Wishlist wishlist;
+	TurismStore srv{ repo,val, wishlist };
+	ConsoleUI ui{ srv };
+	
+	ui.run();
+}
+
+int main() {
+	testAll();
+	startApp();
+	//cout << "im here";
+}
