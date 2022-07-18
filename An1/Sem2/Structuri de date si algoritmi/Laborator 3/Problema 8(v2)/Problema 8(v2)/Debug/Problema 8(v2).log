@@ -1,0 +1,10 @@
+﻿  App.cpp
+  IteratorMultime.cpp
+  Multime.cpp
+  TestExtins.cpp
+  TestScurt.cpp
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1092,5): error MSB6006: "link.exe" exited with code 1120.
+IteratorMultime.obj : error LNK2019: unresolved external symbol "public: int __thiscall Nod::element(void)" (?element@Nod@@QAEHXZ) referenced in function "public: int __thiscall IteratorMultime::element(void)const " (?element@IteratorMultime@@QBEHXZ)
+IteratorMultime.obj : error LNK2019: unresolved external symbol "public: class Nod * __thiscall Nod::urmator(void)" (?urmator@Nod@@QAEPAV1@XZ) referenced in function "public: void __thiscall IteratorMultime::urmator(void)" (?urmator@IteratorMultime@@QAEXXZ)
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 3\Problema 8(v2)\Debug\Problema 8(v2).exe : fatal error LNK1120: 2 unresolved externals

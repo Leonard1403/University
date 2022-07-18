@@ -1,0 +1,5 @@
+﻿  TestExtins.cpp
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 1\TAD Multime\Teste\TestExtins.cpp(3,10): fatal error C1083: Cannot open include file: 'IteratorMultime.h': No such file or directory
+  TestScurt.cpp
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 1\TAD Multime\Teste\TestScurt.cpp(3,10): fatal error C1083: Cannot open include file: 'Multime.h': No such file or directory
+  Generating Code...

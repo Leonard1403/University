@@ -1,0 +1,7 @@
+﻿  TestExtins.cpp
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\Problema 16\TestExtins.cpp(81,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\Problema 16\TestExtins.cpp(91,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\Problema 16\TestExtins.cpp(105,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\Problema 16\TestExtins.cpp(113,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\Problema 16\TestExtins.cpp(222,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Problema 16.vcxproj -> E:\Facultate\An1\Sem2\Structuri de date si algoritmi\Laborator 6\Problema 16\x64\Debug\Problema 16.exe

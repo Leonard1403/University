@@ -1,0 +1,6 @@
+Aceasta este linia 1 
+aceasta este linia 2 
+aceasta este linia 3 
+Aceasta este linia 4
+Aceasta este linia 5
+cat

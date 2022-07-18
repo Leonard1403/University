@@ -1,0 +1,1 @@
+Proiectul foloseste o lista ordonata cu pozitie iterator

@@ -1,0 +1,27 @@
+1.
+grep -E '[aeiou][aeiou][aeiou]' vowels.txt
+grep -E '.*[aeiou]{3}.*' vowels.txt
+2.
+sed 's/[A-z][0-9]/\1\1\2/g' a.txt
+3.
+BEGIN{S=0}
+{ IF($2<$3)
+	S+=$3
+}
+END {PRINT $3}
+4.
+5.
+6.
+fork(); frok();  fork(); 		fork();
+^	^	 ^			^
+|	|	 |			|
+1	1 + 1	 (1 + (1+1)) + 1	(1)+(1+1)+((1+(1+1))+1) + 1
+1 + 2 + 4 + 8 =
+15
+
+
+NOTES:
+Daca vrei sa afisezi toate liniile care contin cuvinte 
+cu inceput de vocala si sfarsit de vocala
+poti folosii comanda
+grep -E '^[aeiou].*[a-z].[aeiou]$' vowels.txt

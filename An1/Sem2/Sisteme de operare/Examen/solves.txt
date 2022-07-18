@@ -1,0 +1,25 @@
+Inceput
+1.
+grep -h '\<[A-Z][a-zA-Z0-9]*\>' a.txt
+2.
+sed 's/\([[:digit:]]\)\([[:digit:]]\)/\2\1/g' b.txt
+3.
+
+Sub27IUN2019
+1.
+
+
+
+
+
+
+Prima poza
+Ex:
+Scrieti o expresie regulara care sa accepte doar linii de lngime ultiplu de 5
+
+
+
+
+
+NOTES:
+Pentru vizualizarea tuturor proceselor se foloseste comanda ps -f
