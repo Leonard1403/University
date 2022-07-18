@@ -1,0 +1,2 @@
+Intrebare:
+Ce se intampla daca in header punem in functie mai multi parametrii , iar in fisierul c folosim doar un singur parametru.
