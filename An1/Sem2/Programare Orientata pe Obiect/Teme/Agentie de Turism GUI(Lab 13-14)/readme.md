@@ -46,3 +46,6 @@ This generate some offerts in wishlist
 This paint the offerts from the wishlist(i used an observe class that looks in wishlist for painting, when the wishlist uppdates , u can check this GUI to see another line)
 
 ![2](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/Desenare%20Wishlist.png)
+
+9. In this box u need to put a number that will provide u some random offerts in wishlist
+![rand_](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI%20-%20Copie%20(3).png)
