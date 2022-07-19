@@ -1,0 +1,29 @@
+﻿  main.cpp
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(21,1): error C2280: 'Turism::Turism(void)': attempting to reference a deleted function
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16): message : see declaration of 'Turism::Turism'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16,2): message : 'Turism::Turism(void)': function was explicitly deleted
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(18): message : while compiling class template member function 'VectorDinamic<Turism>::VectorDinamic(void)'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.h(22): message : see reference to function template instantiation 'VectorDinamic<Turism>::VectorDinamic(void)' being compiled
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.h(20): message : see reference to class template instantiation 'VectorDinamic<Turism>' being compiled
+  Repository.cpp
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(28,1): error C2280: 'Turism::Turism(void)': attempting to reference a deleted function
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16): message : see declaration of 'Turism::Turism'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16,2): message : 'Turism::Turism(void)': function was explicitly deleted
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(25): message : while compiling class template member function 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.cpp(76): message : see reference to function template instantiation 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)' being compiled
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.h(20): message : see reference to class template instantiation 'VectorDinamic<Turism>' being compiled
+  Service.cpp
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(28,1): error C2280: 'Turism::Turism(void)': attempting to reference a deleted function
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16): message : see declaration of 'Turism::Turism'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16,2): message : 'Turism::Turism(void)': function was explicitly deleted
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(25): message : while compiling class template member function 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Service.cpp(34): message : see reference to function template instantiation 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)' being compiled
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.h(20): message : see reference to class template instantiation 'VectorDinamic<Turism>' being compiled
+  UI.cpp
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(28,1): error C2280: 'Turism::Turism(void)': attempting to reference a deleted function
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16): message : see declaration of 'Turism::Turism'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Turism.h(16,2): message : 'Turism::Turism(void)': function was explicitly deleted
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Vector.h(25): message : while compiling class template member function 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)'
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\UI.cpp(197): message : see reference to function template instantiation 'VectorDinamic<Turism>::VectorDinamic(const VectorDinamic<Turism> &)' being compiled
+E:\Facultate\An1\Sem2\Programare orientata pe obiect\Teme\Lab 6-7 Iteratia 2\Problema 6\Problema 6\Repository.h(20): message : see reference to class template instantiation 'VectorDinamic<Turism>' being compiled
+  Generating Code...
