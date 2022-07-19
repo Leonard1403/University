@@ -10,4 +10,4 @@ Description: At a lab i Had to do a project about a Tourism Agency that can do t
 
 In the corner u can observe that there are some buttons.
 Those buttons show u how many Offers u have from this type.
-[GUI](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI.png)
+![GUI](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI.png)
