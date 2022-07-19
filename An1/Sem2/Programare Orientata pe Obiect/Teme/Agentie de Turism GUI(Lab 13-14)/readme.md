@@ -15,4 +15,7 @@ Those buttons show u how many Offers u have from this type.
 Now, i will describe every section from this GUI meniu:
 1. First of all, u can see in the right corner that this project is orginized in directorys, ALL CODES HAVE A DESIGNATION
 ![corner](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/right.png)
-2. 
+2. We start with the add from wishlist. Put a name(THAT ALREADY EXISTS) in this message box and the program will add it in the wishlist
+![wishlist_corner](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI%20-%20Copie.png)
+3. Check the types buttons that i already discussed
+![buttons_corner](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI%20-%20Copie%20(9).png)
