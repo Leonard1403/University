@@ -1,0 +1,106 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  extern exit, fopen, fprintf, fclose, fscanf , printf
+    11                                  import exit msvcrt.dll
+    12                                  import fopen msvcrt.dll
+    13                                  import fprintf msvcrt.dll
+    14                                  import printf msvcrt.dll
+    15                                  import fscanf msvcrt.dll
+    16                                  import fclose msvcrt.dll
+    17                                  
+    18                                  ; our data is declared here (the variables needed by our program)
+    19                                  
+    20                                  ;Se da un fisier text. Sa se citeasca continutul fisierului, sa se contorizeze numarul de cifre impare si sa se afiseze aceasta valoare. Numele fisierului text este definit in segmentul de date.
+    21                                  segment data use32 class=data
+    22                                      ; ...
+    23 00000000 00000000                    a dd 0
+    24 00000004 02000000                    val2 dd 2
+    25 00000008 0A000000                    val10 dd 10
+    26 0000000C 0000000000000000            copie dq 0
+    27 00000014 696E2E74787400              fisier1 db "in.txt"  , 0
+    28 0000001B 56616C6F6172653A20-         afisare db "Valoare: %d" , 0
+    28 00000024 256400             
+    29 00000027 256400                      citire db "%d" , 0
+    30 0000002A 7200                        acces_citire db "r", 0
+    31 0000002C 00000000                    descriptor1 dd 0
+    32 00000030 00000000                    descriptor2 dd 0
+    33                                      
+    34                                  ; our code starts here
+    35                                  segment code use32 class=code
+    36                                      start:
+    37                                          ; ...
+    38                                          
+    39 00000000 68[2A000000]                    push dword acces_citire   
+    40 00000005 68[14000000]                    push dword fisier1
+    41 0000000A FF15[00000000]                  call [fopen]
+    42 00000010 83C408                          add esp, 4*2                ; clean-up the stack
+    43 00000013 A3[2C000000]                    mov [descriptor1], eax  ; store the file descriptor returned by fopen
+    44                                          
+    45                                          ; check if fopen() has successfully created the file (EAX != 0)
+    46 00000018 83F800                          cmp eax, 0
+    47 0000001B 747B                            je final
+    48                                          
+    49                                          
+    50 0000001D 68[00000000]                    push dword a
+    51 00000022 68[27000000]                    push dword citire
+    52 00000027 FF35[2C000000]                  push dword [descriptor1]
+    53 0000002D FF15[00000000]                  call [fscanf]
+    54 00000033 83C40C                          add esp, 4*3
+    55                                   
+    56 00000036 A1[00000000]                    MOV EAX , [a]
+    57 0000003B BB00000000                      MOV EBX , 0
+    58                                          
+    59 00000040 99                              CDQ ; EAX -> EDX:EAX
+    60                                     
+    61                                          ;MOV BX , 10
+    62                                          
+    63                                          ax_dif_0:
+    64 00000041 A3[0C000000]                        MOV [copie+0] , EAX ;copie
+    65 00000046 8915[10000000]                      MOV [copie+4] , EDX
+    66                                              
+    67 0000004C F73D[04000000]                      IDIV dword[val2] ; AH = AX%2
+    68                                              
+    69 00000052 83FA00                              CMP EDX , 0
+    70 00000055 7403                                je div_2
+    71 00000057 83C301                                  ADD EBX , 1
+    72                                              div_2:
+    73                                              
+    74 0000005A A1[0C000000]                        MOV EAX , [copie+0]
+    75 0000005F 8B15[10000000]                      MOV EDX , [copie+4]
+    76                                             
+    77 00000065 F73D[08000000]                      IDIV dword[val10]
+    78                                              
+    79                                              
+    80                                              ;MOV [a] , AX
+    81                                              ;push dword[a]
+    82                                              ;push dword afisare
+    83                                              ;call [printf]
+    84                                              ;add esp, 4*2
+    85                                              
+    86 0000006B 83F800                              CMP EAX , 0
+    87                                              
+    88 0000006E 75D1                            jne ax_dif_0
+    89                                           
+    90 00000070 A3[00000000]                    mov [a] , EAX
+    91 00000075 FF35[00000000]                  push dword [a]
+    92 0000007B 68[1B000000]                    push dword afisare
+    93 00000080 FF15[00000000]                  call [printf]
+    94 00000086 83C408                          add esp, 4*2
+    95                                          
+    96                                          
+    97 00000089 FF35[2C000000]                  push dword [descriptor1]
+    98 0000008F FF15[00000000]                  call [fclose]
+    99 00000095 83C404                          add esp, 4
+   100                                  
+   101                                  
+   102                                        final:
+   103                                          ; exit(0)
+   104 00000098 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   105 0000009A FF15[00000000]                  call    [exit]       ; call exit to terminate the program

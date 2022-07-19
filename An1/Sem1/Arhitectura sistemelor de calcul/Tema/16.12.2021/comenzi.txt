@@ -1,0 +1,5 @@
+nasm -fobj main.asm
+nasm -fobj baza2in16.asm
+alink -oPE -subsys console -entry start main.obj baza2in16.obj
+main.exe
+

@@ -1,0 +1,90 @@
+MOV AL , byte
+AL = 254
+AL = FEh
+
+MOV BL , byte
+BL =  1
+BL = 01h
+
+MUL BL
+BL = 254
+BL = FEh
+
+MOV BL , byte
+BL = 254
+BL = FEh
+
+MOV BH , 0
+BX = 254
+BX = FEh 
+
+ADD AX , BX
+AX = 508
+AX = 01FCh
+
+SUB AX , 9
+AX = 499
+AX = 01F3h
+
+MOV BX , AX
+BX = 499
+BX = 01F3
+
+MOV AX , 2
+AX = 2
+AX = 0002h
+
+MOV DX , 0
+DX = 0
+DX = 0000h
+
+DIV BX
+EAX = 0
+EAX = 0000h
+EDX = 2
+EDX = 0002h
+
+MOV BX , AX
+BX = 0
+BX = 0000h
+
+MOV EAX , 0
+EAX = 0
+EAX = 0000h
+
+MOVZX EAX , BX
+Se trece linia
+
+MOV EDX , 0
+EDX = 0
+EDX = 0000h
+
+MOV ECX , dword
+ECX = 0
+ECX = 0000h
+
+MOV EBX , dword
+EBX = 52411
+EBX = CCBBh
+
+ADD EBX , EAX
+Se trece linia
+
+ADC ECX , EDX
+CF = 1
+
+MOV EAX , dword
+EAX = 52411
+EAX = CCBBh
+
+MOV EDX , 0
+Se trece linia
+
+SUB EBX , EAX
+EBX = 0
+EBX = 0000h
+
+SBB ECX , EDX
+se trece linia 
+
+Push 0

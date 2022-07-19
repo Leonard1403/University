@@ -1,0 +1,88 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  import printf msvcrt.dll
+     4                                  import exit msvcrt.dll
+     5                                  import scanf msvcrt.dll
+     6                                  extern printf, exit, scanf
+     7                                  
+     8                                  segment data use32 class = data
+     9 00000000 00000000                    da dd 0
+    10 00000004 01000000                    put dd 1
+    11 00000008 00                          restul db 0
+    12 00000009 00                          ce db 0 
+    13 0000000A 00000000                    rezultat dd 0 
+    14 0000000E 256400                      citire db '%d' , 0
+    15 00000011 02000000                    div2 dd 2
+    16 00000015 0A000000                    div10 dd 10
+    17 00000019 76616C6F6172653A20-         mesaj_afisare db 'valoare: ', 0
+    17 00000022 00                 
+    18 00000023 76616C6F6172653A20-         afisare_variabile db 'valoare: %d' , 10
+    18 0000002C 25640A             
+    19                                  
+    20                                  segment code use32 public code
+    21                                  
+    22                                  global baza2in16
+    23                                  
+    24                                  baza2in16:
+    25                                      
+    26                                      ;push mesaj
+    27                                      ;call [printf]
+    28                                      ;add esp, 4
+    29 00000000 8B442404                    mov eax , [esp + 4] ; eax = am pus numarul
+    30 00000004 BB01000000                  mov ebx , 1 ; contorizam puterea 
+    31 00000009 B900000000                  mov ecx , 0 ; contorizam restul
+    32 0000000E BA00000000                  mov edx , 0 ; rezultatul 
+    33                                      
+    34 00000013 A3[00000000]                mov [da] , eax
+    35                                      
+    36                                      repeta:
+    37 00000018 A1[00000000]                        mov eax , dword [da]
+    38 0000001D 99                                  cdq
+    39                                              ;mov edx , [da+4]
+    40                                              ;mov edx , dword [da+4]
+    41 0000001E F735[15000000]                      div dword [div10]
+    42 00000024 8915[08000000]                      mov [restul] , edx
+    43                                              ;cwd
+    44                                              
+    45                                              ;mov [da+0] , eax
+    46                                              ;mov [da+4] , edx
+    47 0000002A A3[00000000]                        mov [da] , eax
+    48                                              ;cmp 
+    49                                              
+    50                                              ;-----------------------------------------
+    51 0000002F A1[08000000]                        mov eax , [restul]
+    52                                              ;mov edx , 0
+    53 00000034 F725[04000000]                      mul dword [put]
+    54                                              ;mov [ce] , eax
+    55                                              
+    56                                              ;add [rezultat+0] , eax
+    57                                              ;adc [rezultat+4] , edx
+    58                                             
+    59 0000003A 01C1                                add ecx , eax
+    60                                              ;mov [rezultat] , ecx
+    61                                  
+    62                                              
+    63                                              
+    64                                              
+    65 0000003C A1[04000000]                        mov eax , dword [put]
+    66 00000041 F725[11000000]                      mul dword [div2]
+    67 00000047 A3[04000000]                        mov [put] , eax
+    68                                              
+    69                                               
+    70                                              ;-----------------------------------------
+    71                                              
+    72                                              ;push ecx
+    73                                              ;push afisare_variabile
+    74                                              ;call [printf]
+    75                                              ;add esp , 4*2
+    76                                              
+    77 0000004C 833D[00000000]00                    cmp dword [da] , 0
+    78 00000053 75C3                        jne repeta
+    79                                          
+    80 00000055 51                          push ecx
+    81 00000056 68[23000000]                push afisare_variabile
+    82 0000005B FF15[00000000]              call [printf]
+    83 00000061 83C408                      add esp , 4*2
+    84                                      
+    85                                      
+    86 00000064 C20400                      ret 4*1 

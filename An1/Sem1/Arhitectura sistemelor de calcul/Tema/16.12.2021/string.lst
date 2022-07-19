@@ -1,0 +1,179 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit , printf , scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  
+     9                                  import scanf msvcrt.dll
+    10                                  import printf msvcrt.dll
+    11                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    12                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16                                      ; ...
+    17 00000000 00000000                    da dd 0
+    18 00000004 4100                        v10 db 'A' , 0
+    19 00000006 4200                        v11 db 'B' , 0
+    20 00000008 4300                        v12 db 'C' , 0
+    21 0000000A 4400                        v13 db 'D' , 0
+    22 0000000C 4500                        v14 db 'E' , 0
+    23 0000000E 4600                        v15 db 'F' , 0
+    24                                      ;e10 db 10
+    25                                      ;e11 db 11
+    26                                      ;e12 db 12
+    27                                      ;e13 db 13
+    28                                      ;e14 db 14 
+    29                                      ;e15 db 15
+    30                                      len equ 7
+    31 00000010 FFFFFFFF<rept>              sir times len dd -1
+    32 0000002C 01000000                    put dd 1
+    33 00000030 00                          restul db 0
+    34 00000031 00                          ce db 0 
+    35 00000032 00000000                    rezultat dd 0 
+    36 00000036 00000000                    copie dd 0
+    37 0000003A 00000000                    copie_ecx dd 0
+    38 0000003E 256400                      citire db '%d' , 0
+    39 00000041 256300                      afisare_c db '%c' , 0
+    40 00000044 02000000                    div2 dd 2
+    41 00000048 0A000000                    div10 dd 10
+    42 0000004C 10000000                    div16 dd 16
+    43 00000050 76616C6F6172653A20-         mesaj_afisare db 'valoare: ', 0
+    43 00000059 00                 
+    44 0000005A 76616C6F6172653A20-         afisare_variabile db 'valoare: %d' , 10
+    44 00000063 25640A             
+    45                                      
+    46                                  ; our code starts here
+    47                                  segment code use32 class=code
+    48                                      start:
+    49                                          ; ...
+    50                                          
+    51 00000000 68[50000000]                    push mesaj_afisare
+    52 00000005 FF15[00000000]                  call [printf]
+    53 0000000B 83C404                          add esp, 4
+    54                                          
+    55 0000000E 68[00000000]                    push da
+    56 00000013 68[3E000000]                    push citire
+    57 00000018 FF15[00000000]                  call [scanf]
+    58 0000001E 83C408                          add esp , 4*2
+    59 00000021 B900000000                      mov ecx , 0
+    60                                          ;mov ecx , 1 ; puterile lui 2 
+    61                                          
+    62                                          repeta:
+    63 00000026 A1[00000000]                        mov eax , dword [da]
+    64 0000002B 99                                  cdq
+    65                                              ;mov edx , [da+4]
+    66                                              ;mov edx , dword [da+4]
+    67 0000002C F735[48000000]                      div dword [div10]
+    68 00000032 8915[30000000]                      mov [restul] , edx
+    69                                              ;cwd
+    70                                              
+    71                                              ;mov [da+0] , eax
+    72                                              ;mov [da+4] , edx
+    73 00000038 A3[00000000]                        mov [da] , eax
+    74                                              ;cmp 
+    75                                              
+    76                                              ;-----------------------------------------
+    77 0000003D A1[30000000]                        mov eax , [restul]
+    78                                              ;mov edx , 0
+    79 00000042 F725[2C000000]                      mul dword [put]
+    80                                              ;mov [ce] , eax
+    81                                              
+    82                                              ;add [rezultat+0] , eax
+    83                                              ;adc [rezultat+4] , edx
+    84                                             
+    85 00000048 01C1                                add ecx , eax
+    86                                              ;mov [rezultat] , ecx
+    87                                  
+    88                                              
+    89                                              
+    90                                              
+    91 0000004A A1[2C000000]                        mov eax , dword [put]
+    92 0000004F F725[44000000]                      mul dword [div2]
+    93 00000055 A3[2C000000]                        mov [put] , eax
+    94                                              
+    95                                               
+    96                                              ;-----------------------------------------
+    97                                              
+    98                                              ;push ecx
+    99                                              ;push afisare_variabile
+   100                                              ;call [printf]
+   101                                              ;add esp , 4*2
+   102                                              
+   103 0000005A 833D[00000000]00                    cmp dword [da] , 0
+   104 00000061 75C3                            jne repeta
+   105                                          
+   106                                          ;push ecx
+   107                                          ;push afisare_variabile
+   108                                          ;call [printf]
+   109                                          ;add esp , 4*2
+   110                                          
+   111 00000063 89C8                            mov eax , ecx ; eax rezultatul
+   112 00000065 BB00000000                      mov ebx , 0
+   113 0000006A B907000000                      mov ecx , 7
+   114 0000006F BA00000000                      mov edx , 0
+   115                                          
+   116 00000074 A3[36000000]                    mov [copie] , eax
+   117 00000079 BF[10000000]                    MOV EDI , sir
+   118                                          ;MOV ESI , sir 
+   119 0000007E FC                              CLD
+   120                                          pentru1:
+   121 0000007F A1[36000000]                        mov eax , dword [copie]
+   122 00000084 99                                  cdq
+   123                                              
+   124                                              ;mov edx , 0
+   125 00000085 F735[4C000000]                      div dword[div16]
+   126 0000008B A3[36000000]                        mov [copie] , eax
+   127 00000090 89D0                                mov eax , edx
+   128 00000092 AB                                  STOSD
+   129                                              
+   130 00000093 83F800                              cmp eax , 0
+   131 00000096 7402                                je e0
+   132                                              ;push eax
+   133                                              ;push afisare_variabile
+   134                                              ;call [printf]
+   135                                              ;add esp , 4*2
+   136 00000098 E2E5                            loop pentru1
+   137                                          e0:
+   138                                          ;mov EDI , sir
+   139 0000009A B800000000                      mov eax , 0
+   140 0000009F B907000000                      mov ecx , 7
+   141 000000A4 BE[10000000]                    mov ESI , sir
+   142 000000A9 FD                              STD
+   143                                          pentru2:
+   144 000000AA AD                                  LODSD
+   145 000000AB 890D[3A000000]                      mov [copie_ecx] , ecx
+   146 000000B1 A3[36000000]                        mov [copie] , eax
+   147 000000B6 83F800                              cmp eax , 0
+   148 000000B9 7414                                je este0 ; eax e 0 sare (NU VREAU SA-MI AFISEZE VAL 0)
+   149                                              ;CMP EAX , 10
+   150                                              ;JGE sub10 ;jge destination >= source (signed)
+   151                                              ;    push eax
+   152                                              ;    push citire
+   153                                              ;    call [printf]
+   154                                              ;    add esp, 4*2
+   155                                              ;sub10:
+   156                                              ; 
+   157                                              ;JNE nueste10
+   158                                              ;    push v10
+   159                                              ;    push afisare_c
+   160                                              ;    call [printf]
+   161                                              ;    add esp, 4*2
+   162                                              ;nueste10:
+   163 000000BB FF35[36000000]                      push dword [copie]
+   164 000000C1 68[5A000000]                        push afisare_variabile
+   165 000000C6 FF15[00000000]                      call [printf]
+   166 000000CC 83C408                              add esp , 4*2
+   167                                              este0:
+   168 000000CF 8B0D[3A000000]                      mov ecx , dword [copie_ecx]
+   169 000000D5 E2D3                            loop pentru2
+   170                                          
+   171                                          ;push dword [rezultat]
+   172                                          ;push afisare_variabile
+   173                                          ;call [printf]
+   174                                          ;add esp , 4*2
+   175                                          ; exit(0)
+   176 000000D7 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   177 000000D9 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

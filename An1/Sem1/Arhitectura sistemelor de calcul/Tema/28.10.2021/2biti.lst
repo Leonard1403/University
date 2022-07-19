@@ -1,0 +1,86 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 2A0A                        A dw 0000101000101010b
+    15 00000002 5A55                        B dw 0101010101011010b               
+    16 00000004 00000000                    C dd 00000000000000000000000000000000b
+    17                                      ;Se dau cuvintele A si B. Se cere dublucuvantul C:
+    18                                      ;bitii 0-3 ai lui C coincid cu bitii 5-8 ai lui B
+    19                                      ;bitii 4-8 ai lui C coincid cu bitii 0-4 ai lui A
+    20                                      ;bitii 9-15 ai lui C coincid cu bitii 6-12 ai lui A
+    21                                      ;bitii 16-31 ai lui C coincid cu bitii lui B
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; ...
+    26 00000000 668B15[00000000]                mov dx , [A]
+    27 00000007 668B1D[02000000]                mov bx , [B]
+    28 0000000E 8B0D[04000000]                  mov ecx ,[C]
+    29                                          ;   0000 1111 0000 0000 0000 0000 0000 0000
+    30                                          ;  (1234 5678 1234 5678-1234 5678 1234 5678)
+    31                                  
+    32 00000014 6681E3E001                      and bx , 0000000111100000b
+    33                                                  ;0   0   0   0   	0   0   0  1  	1  1  1  0  	0  0  0 0b
+    34                                                  ;b15 b14 b13 b12 	b11 b10 b9 b8 	b7 b6 b5 b4 	b3 b2 b1 b0
+    35                                  
+    36 00000019 B800000000                      mov eax , 0
+    37 0000001E 0FB7C3                          movzx eax , bx
+    38 00000021 89C3                            mov ebx , eax
+    39 00000023 C1EB05                          shr ebx , 5
+    40 00000026 09D9                            or ecx , ebx
+    41                                  
+    42 00000028 BB00000000                      mov ebx , 0
+    43 0000002D 668B1D[02000000]                mov bx , [B]
+    44                                  
+    45 00000034 6683E21F                        and dx , 0000000000011111b
+    46                                                  ;a15 a14 a13 a12 	a11 a10 a9 a8 	a7 a6 a5 a4 	a3 a2 a1 a0
+    47 00000038 66C1E204                        shl dx, 4
+    48 0000003C B800000000                      mov eax, 0
+    49 00000041 0FB7C2                          movzx eax , dx
+    50 00000044 89C2                            mov edx , eax
+    51 00000046 09D1                            or ecx , edx
+    52                                  
+    53 00000048 BA00000000                      mov edx , 0
+    54 0000004D 668B15[00000000]                mov dx , [A]
+    55                                  
+    56                                  
+    57 00000054 6681E2C01F                      and dx , 0001111111000000b
+    58                                                  ;a15 a14 a13 a12 	a11 a10 a9 a8 	a7 a6 a5 a4 	a3 a2 a1 a0
+    59                                  
+    60                                          ; 0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  0  0  0  0  0  0  0  0  0
+    61                                          ;c31 c30 c29 c28 c27 c26 c25 c24 c23 c22 c21 c20 c19 c18 c17 c16 c15 c14 c13 c12 c11 c10 c9 c8 c7 c6 c5 c4 c3 c2 c1 c0
+    62                                  
+    63 00000059 B800000000                      mov eax, 0
+    64 0000005E 0FB7C2                          movzx eax , dx
+    65 00000061 89C2                            mov edx , eax
+    66 00000063 C1E203                          shl edx , 3
+    67                                  
+    68 00000066 09D1                            or ecx , edx
+    69 00000068 BA00000000                      mov edx , 0
+    70 0000006D 668B15[00000000]                mov dx , [A]
+    71                                  
+    72                                          ;-----------------------------------------------------------
+    73                                  
+    74 00000074 B800000000                      mov eax , 0
+    75 00000079 0FB7C3                          movzx eax , bx
+    76 0000007C 89C3                            mov ebx , eax
+    77 0000007E C1E310                          shl ebx , 16
+    78                                  
+    79 00000081 09D9                            or ecx , ebx
+    80                                  
+    81 00000083 BB00000000                      mov ebx , 0
+    82 00000088 668B1D[02000000]                mov bx , [B]
+    83                                  
+    84                                          ; exit(0)
+    85 0000008F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    86 00000091 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

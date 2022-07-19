@@ -1,0 +1,97 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                                            
+    11                                  extern exit, fopen, fprintf, fclose, fscanf, printf, scanf 
+    12                                  
+    13                                  import exit msvcrt.dll
+    14                                  import fopen msvcrt.dll
+    15                                  import fprintf msvcrt.dll
+    16                                  import fscanf msvcrt.dll
+    17                                  import fclose msvcrt.dll
+    18                                  
+    19                                  import printf msvcrt.dll   
+    20                                  import scanf msvcrt.dll 
+    21                                  
+    22                                  ; our data is declared here (the variables needed by our program)
+    23                                  segment data use32 class=data
+    24                                      ; ...
+    25 00000000 696E7075742E747874-         fisier db 'input.txt', 0
+    25 00000009 00                 
+    26 0000000A 7200                        r db 'r' , 0
+    27 0000000C 00000000                    fa dd 0 ; descriptor
+    28 00000010 00000000                    val dd 0
+    29 00000014 25782000                    formathex db '%x ', 0 ; hex read and output
+    30 00000018 25642000                    formatdex db '%d ', 0
+    31 0000001C 00                          copie_ecx db 0
+    32 0000001D 00000000                    copie dd 0
+    33 00000021 FF                          minim db 0xFFFFF
+    33          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    34 00000022 0A000000                    div10 dd 10
+    35                                  ; our code starts here
+    36                                  segment code use32 class=code
+    37                                      start:
+    38                                          ; ...
+    39                                          
+    40 00000000 68[0A000000]                    push dword r
+    41 00000005 68[00000000]                    push dword fisier
+    42 0000000A FF15[00000000]                  call [fopen]
+    43 00000010 83C408                          add esp, 4*2
+    44 00000013 A3[0C000000]                    mov [fa] , eax
+    45 00000018 833D[0C000000]00                cmp dword [fa] , 0
+    46                                          
+    47 0000001F B90A000000                      mov ecx , 10
+    48 00000024 890D[1C000000]                  mov [copie_ecx] , ecx
+    49 0000002A 7453                            je fin
+    50                                              repeta:
+    51 0000002C 890D[1C000000]                      mov [copie_ecx], ecx
+    52                                              
+    53                                              ;citirea valorilor
+    54 00000032 68[10000000]                        push dword val
+    55 00000037 68[14000000]                        push dword formathex
+    56 0000003C FF35[0C000000]                      push dword [fa]
+    57 00000042 FF15[00000000]                      call [fscanf]
+    58 00000048 83C40C                              add esp, 4*3
+    59                                              
+    60 0000004B A1[10000000]                        mov eax, [val]
+    61 00000050 B97F969800                          mov ecx, 9999999
+    62                                              cif_min:
+    63                                                  ;mov eax, [val]
+    64 00000055 99                                      cdq ; eax -> edx:eax
+    65                                                  
+    66 00000056 BB0A000000                              mov ebx , 10
+    67 0000005B F7FB                                    idiv ebx
+    68                                                  ;mov [val] , eax
+    69                                                  ;edx -> eax%10
+    70                                                  ;eax -> eax/10
+    71                                                  
+    72 0000005D 39D1                                    cmp ecx , edx
+    73 0000005F 7C02                                    jl calc
+    74 00000061 89D1                                      mov ecx , edx  
+    75                                                  calc:
+    76                                                  
+    77 00000063 83F800                                  cmp eax , 0
+    78 00000066 75ED                                jne cif_min
+    79                                              
+    80                                              ;afisare
+    81 00000068 51                                  push dword ecx
+    82 00000069 68[18000000]                        push dword formatdex
+    83 0000006E FF15[00000000]                      call [printf]
+    84 00000074 83C408                              add esp, 4*2
+    85                                              
+    86 00000077 8B0D[1C000000]                      mov ecx , [copie_ecx]
+    87 0000007D E2AD                                loop repeta
+    88                                          fin:
+    89                                          
+    90 0000007F FF35[0C000000]                  push dword [fa]
+    91 00000085 FF15[00000000]                  call [fclose]
+    92 0000008B 83C404                          add esp, 4
+    93                                          ; exit(0)
+    94 0000008E 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    95 00000090 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

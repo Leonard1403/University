@@ -1,0 +1,66 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 0519377F                    S db 5 , 25 , 55 , 127
+    15                                      len_S EQU ($-S)
+    16 00000004 00<rept>                    D times len_S db 0
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; ...
+    21                                          ;mov ECX , len_S
+    22                                          ;mov ESI , S
+    23                                          ;mov EDI , D
+    24                                          ;LODSB 
+    25                                          ;jmp first_time
+    26                                          ;SUB ECX , 1
+    27                                          ;MyRepeat
+    28                                          ;    alt_element:
+    29                                          ;    MOV AL , BL
+    30                                          ;    MOV BL , 0
+    31                                          ;    STOSB
+    32                                          ;    LODSB ; AL = i
+    33                                          ;    
+    34                                          ;    SARI:
+    35                                          ;    first_time:
+    36                                          ;    SHL AL , 1
+    37                                          ;    ADC BL , 0
+    38                                          ;    
+    39                                          ;    CMP AL , 0
+    40                                          ;    JE alt_element
+    41                                          ;    JMP SARI 
+    42                                          ;    
+    43                                          ;LOOP MyRepeat
+    44                                          
+    45 00000000 BB04000000                      mov EBX , len_S
+    46 00000005 BE[00000000]                    mov ESI , S
+    47 0000000A BF[04000000]                    mov EDI , D
+    48 0000000F FC                              CLD
+    49                                          repeta:
+    50 00000010 B908000000                          MOV ECX , 8
+    51 00000015 AC                                  LODSB ; AL = i
+    52 00000016 88C2                                MOV DL , AL
+    53 00000018 B000                                MOV AL , 0
+    54                                              extractie:
+    55 0000001A D0E2                                    SHL DL , 1
+    56 0000001C 1400                                    ADC AL , 0
+    57 0000001E E2FA                                loop extractie        
+    58 00000020 AA                                  STOSB
+    59 00000021 83EB01                          SUB EBX , 1
+    60 00000024 83FB00                          CMP EBX , 0
+    61 00000027 75E7                            JNE repeta
+    62                                          
+    63                                          
+    64                                          ; exit(0)
+    65 00000029 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    66 0000002B FF15[00000000]                  call    [exit]       ; call exit to terminate the program

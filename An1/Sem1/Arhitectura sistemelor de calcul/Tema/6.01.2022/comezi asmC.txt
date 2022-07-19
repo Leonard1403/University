@@ -1,0 +1,6 @@
+E:
+cd E:\Facultate\Arhitectura Sistemelor de calcul\Tema\6.01.2022
+nasm asm+c.asm -fwin32 -o asm+c.obj
+cl sirmain.c /link asm+c.obj
+sirmain.exe
+

@@ -1,0 +1,1 @@
+Se blocheaza la penultima comanda inainte de Push(0)

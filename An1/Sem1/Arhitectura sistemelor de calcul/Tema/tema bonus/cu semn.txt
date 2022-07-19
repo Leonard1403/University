@@ -1,0 +1,83 @@
+MOV AL , byte
+AL = -127
+AL = 81h
+
+MOV BL , byte
+BL = 127
+BL = 7Fh
+
+IMUL BL 
+AX = -16129
+AX = FFh
+
+MOV BL, byte
+BL = -127
+BL = 81h
+
+MOVSX BX , BL
+BX = -127
+BX = FF81h
+
+ADD AX , BX
+AX = -16256
+AX = C080h
+
+SUB AX , 9
+AX = -16265
+AX = C077h
+
+MOV BX , AX
+BX = -16265
+
+MOV AX , 2
+AX = 2
+AX = 0002h
+
+MOV DX , 0
+DX = 0 
+DX = 0000h
+
+IDIV BX
+AX = 0
+AX = 0000h
+
+CWDE
+EAX = 0
+EAX = 0000h
+
+
+CDQ
+EDX = 0
+EDX = 0000h
+
+MOV ECX , dword
+ECX = -17965887
+ECX = FEEDDCC1h
+
+MOV EBX , dword
+EBX = -1122868
+EBX = FFEEDDCCh
+
+ADD EBX , EAX
+
+
+ADC ECX , EDX
++1
+
+MOV EAX , dword
+EAX = -1122868
+EAX = FFEEDDCCh
+
+CDQ
+EDX = -1
+EDX = FFFFFFFFh
+
+SUB EBX , EAX
+EBX = 0 
+EBX = 0000 0000h
+
+SBB ECX , EDX
+ECX = -17965886
+ECX = FEEDDCC2h
+
+Push 0

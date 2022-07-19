@@ -1,0 +1,56 @@
+mov dx , [A]
+mov bx , [B]
+mov ecx ,[C]
+;   0000 1111 0000 0000 0000 0000 0000 0000
+;  (1234 5678 1234 5678-1234 5678 1234 5678)
+
+and bx , 0   0   0   0   	0   0   0  1  	1  1  1  0  	0  0  0 0b
+	;b15 b14 b13 b12 	b11 b10 b9 b8 	b7 b6 b5 b4 	b3 b2 b1 b0
+
+mov eax , 0
+movzx eax , bx
+mov ebx , eax
+shr ebx , 5
+or ecx , ebx
+
+mov ebx , 0
+mov bx , [B]
+
+and dx , 0   0   0   0   	0   0   0  0  	0  0  0  1  	1  1  1  1b
+	;a15 a14 a13 a12 	a11 a10 a9 a8 	a7 a6 a5 a4 	a3 a2 a1 a0
+shl dx, 4
+mov eax, 0
+movzx eax , dx
+mov edx , eax
+or ecx , edx
+
+mov edx , 0
+mov dx , [a]
+
+
+and dx , 0   0   0    1   	1   1   1  1  	1  1  0  0  	0  0  0  0b
+	;a15 a14 a13 a12 	a11 a10 a9 a8 	a7 a6 a5 a4 	a3 a2 a1 a0
+
+; 0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  0  0  0  0  0  0  0  0  0
+;c31 c30 c29 c28 c27 c26 c25 c24 c23 c22 c21 c20 c19 c18 c17 c16 c15 c14 c13 c12 c11 c10 c9 c8 c7 c6 c5 c4 c3 c2 c1 c0
+
+mov eax, 0
+movzx eax , dx
+mov edx , eax
+shl edx , 3
+
+or ecx , edx
+mov edx , 0
+mov dx , [a]
+
+;-----------------------------------------------------------
+
+mov eax , 0
+movzx eax , bx
+mov ebx , eax
+shl ebx , 16
+
+or ecx , ebx
+
+mov ebx , 0
+mov bx , [B]

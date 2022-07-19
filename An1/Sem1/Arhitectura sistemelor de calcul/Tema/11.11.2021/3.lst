@@ -1,0 +1,58 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 01020304                    S1 db 1 , 2 , 3 , 4
+    15                                      lenS1 EQU ($-S1)
+    16 00000004 050607                      S2 db 5 , 6 , 7
+    17                                      lenS2 EQU ($-S2)
+    18                                      lenD  EQU lenS1 + lenS2
+    19 00000007 00<rept>                    D TIMES lenD db 0
+    20                                  
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24                                          ; ...
+    25                                      
+    26                                          ; exit(0)
+    27                                          
+    28 00000000 BE[00000000]                    MOV ESI , S1
+    29 00000005 B904000000                      MOV ECX , lenS1
+    30                                          ;JECXZ final1
+    31 0000000A BF[07000000]                    MOV EDI , D
+    32 0000000F FC                              CLD
+    33                                          Repeta1:
+    34 00000010 AC                                  LODSB ;AL <- ESI
+    35 00000011 AA                                  STOSB ;EDI <- cifra 
+    36 00000012 E2FC                            Loop Repeta1
+    37                                          ;final1:
+    38                                          
+    39 00000014 BE[04000000]                    MOV ESI, S2
+    40 00000019 83C602                          ADD ESI , lenS2-1
+    41 0000001C B903000000                      Mov ECX, lenS2
+    42                                          ;Jecxz final2
+    43                                          Repeta2:
+    44 00000021 FD                                  STD
+    45 00000022 AC                                  LODSB ;AL <- ESI
+    46 00000023 FC                                  CLD
+    47 00000024 AA                                  STOSB ;EDI <- cifra
+    48 00000025 E2FA                            Loop Repeta2
+    49                                          ;final2:
+    50                                  
+    51                                          
+    52                                          
+    53                                          
+    54                                          
+    55                                          
+    56                                          
+    57 00000027 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    58 00000029 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,44 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  import printf msvcrt.dll
+     4                                  import exit msvcrt.dll
+     5                                  import scanf msvcrt.dll
+     6                                  extern printf, exit, scanf
+     7                                  
+     8                                  ;
+     9                                  extern nu
+    10                                  
+    11                                  segment data use32 class=data
+    12                                      ; ...
+    13 00000000 00000000                    val dd 0h
+    14 00000004 76616C6F6172653A20-         afisare db 'valoare: %d', 0
+    14 0000000D 256400             
+    15 00000010 76616C3A2000                mesaj db 'val: ' , 0
+    16 00000016 256400                      citire db '%d' , 0
+    17                                      
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; ...
+    22 00000000 A1[00000000]                    mov eax , dword [val]
+    23                                          
+    24 00000005 68[10000000]                    push dword mesaj
+    25 0000000A FF15[00000000]                  call [printf]
+    26 00000010 83C404                          add esp, 4*1
+    27                                          
+    28 00000013 68[00000000]                    push dword val
+    29 00000018 68[16000000]                    push dword citire
+    30 0000001D FF15[00000000]                  call [scanf]
+    31 00000023 83C408                          add esp, 4*2
+    32                                          
+    33 00000026 FF35[00000000]                  push dword [val]
+    34 0000002C E8(00000000)                    call nu 
+    35                                          
+    36 00000031 50                              push dword eax
+    37 00000032 68[04000000]                    push dword afisare
+    38 00000037 FF15[00000000]                  call [printf]
+    39 0000003D 83C408                          add esp, 4*2
+    40                                          
+    41                                          ; exit(0)
+    42 00000040 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    43 00000042 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

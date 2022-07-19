@@ -1,0 +1,40 @@
+abc
+def
+---
+adbecf
+
+rezultat1 = functia(int n ,char sir1[] ,char sir2[]) 
+rezultat2 = functia(int n ,char sir2[] ,char sir1[])
+
+ebp , esp 
+
+end  	end 
+ ^	 |
+ |       ^
+baza 	baza
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def 
+abc
+---
+dbf

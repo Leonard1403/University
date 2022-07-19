@@ -1,0 +1,45 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 0519377F                    S db 5 , 25 , 55 , 127
+    15                                      len_S EQU ($-S)
+    16 00000004 00<rept>                    D times len_S db 0
+    17                                      
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; ...
+    22 00000000 BB04000000                      mov EBX , len_S
+    23 00000005 BE[00000000]                    mov ESI , S
+    24 0000000A BF[04000000]                    mov EDI , D
+    25                                          ;CLD
+    26                                          repeta:
+    27 0000000F B908000000                          MOV ECX , 8
+    28                                              ;LODSB ; AL = i
+    29 00000014 8A06                                MOV AL , [ESI]
+    30 00000016 46                                  inc ESI 
+    31 00000017 88C2                                MOV DL , AL
+    32 00000019 B000                                MOV AL , 0
+    33                                              extractie:
+    34 0000001B D0E2                                    SHL DL , 1
+    35 0000001D 1400                                    ADC AL , 0
+    36 0000001F E2FA                                loop extractie        
+    37                                              ;STOSB
+    38 00000021 8807                                MOV [EDI] , AL
+    39 00000023 47                                  inc EDI
+    40 00000024 83EB01                          SUB EBX , 1
+    41 00000027 83FB00                          CMP EBX , 0
+    42 0000002A 75E3                            JNE repeta
+    43                                          ; exit(0)
+    44 0000002C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    45 0000002E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

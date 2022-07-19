@@ -1,0 +1,81 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ; a,b,c - byte
+    15                                      ; d     - word
+    16                                      ; (100*a + d + 5 - 75*b)/(c-5)
+    17                                      ; 100 = cons100
+    18                                      ; 75  = cons75
+    19                                      
+    20                                      
+    21 00000000 01                          a db 1
+    22 00000001 01                          b db 1
+    23 00000002 06                          c db 6
+    24 00000003 0100                        d dw 1
+    25                                          
+    26                                      cons100 EQU 100
+    27                                      cons75  EQU 75
+    28                                  
+    29                                          
+    30                                          
+    31                                  ; our code starts here
+    32                                  segment code use32 class=code
+    33                                      start:
+    34                                          
+    35                                          ; ...
+    36                                          
+    37 00000000 A0[00000000]                    MOV AL,[a]
+    38 00000005 B464                            MOV AH, cons100
+    39 00000007 F6E4                            MUL AH 
+    40                                          ; AX = AL*      AH
+    41                                          ; AX = a*cons100
+    42 00000009 6689C3                          MOV BX , AX
+    43                                          ; BX = AX
+    44                                          ; BX = a*cons100
+    45 0000000C B04B                            MOV AL, cons75
+    46 0000000E 8A25[01000000]                  MOV AH, [b]
+    47 00000014 F6E4                            MUL AH
+    48                                          ; AX = AL*      AH
+    49                                          ; AX = b*cons75
+    50 00000016 6689C1                          MOV CX , AX
+    51                                          ; CX = AX
+    52                                          ; CX = b*cons75
+    53 00000019 66A1[03000000]                  MOV AX,[d]
+    54                                          ;AX = d
+    55 0000001F 6683C005                        ADD AX, 5
+    56                                          ; AX = d + 5
+    57 00000023 6601D8                          ADD AX , BX
+    58                                          ; AX = AX + BX
+    59                                          ; AX = (a*cons100 + d + 5)
+    60 00000026 6629C8                          SUB AX , CX
+    61                                          ; AX = AX - CX
+    62                                          ; AX = (a*cons100 + d + 5 - b*cons75)
+    63 00000029 6689C1                          MOV CX , AX
+    64 0000002C 8A1D[02000000]                  MOV BL , [c]
+    65                                          ; BL = c
+    66 00000032 80EB05                          SUB BL , 5
+    67                                          ; BL = BL - 5
+    68                                          ; BL = c - 5
+    69 00000035 6689C8                          MOV AX , CX
+    70 00000038 F6F3                            DIV BL
+    71                                          ; AL = AX / BL
+    72                                          ; AL = (a*cons100 + d + 5 - b*cons75) / (c - 5)
+    73                                          
+    74                                          
+    75                                          
+    76                                          
+    77                                          
+    78                                          
+    79                                          ; exit(0)
+    80 0000003A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    81 0000003C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

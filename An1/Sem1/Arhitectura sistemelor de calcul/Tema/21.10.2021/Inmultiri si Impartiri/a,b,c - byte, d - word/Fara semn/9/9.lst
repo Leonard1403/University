@@ -1,0 +1,80 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ; a,b,c - byte, d - word
+    15                                      ; 3*[20*(b-a+2)-10*c]+2*(d-3)
+    16                                      
+    17 00000000 01                          a db 1
+    18 00000001 02                          b db 2
+    19 00000002 01                          c db 1
+    20 00000003 0200                        d dw 2
+    21                                      cons20 EQU 20
+    22                                      
+    23                                      
+    24                                      
+    25                                  ; our code starts here
+    26                                  segment code use32 class=code
+    27                                      start:
+    28                                          ; ...
+    29                                          
+    30 00000000 A0[01000000]                    MOV AL , [b]
+    31                                          ; AL = b
+    32 00000005 2A05[00000000]                  SUB AL , [a]
+    33                                          ; AL = b - a
+    34 0000000B 0402                            ADD AL , 2
+    35                                          ; AL = b - a + 2
+    36                                          
+    37 0000000D B314                            MOV BL , 20
+    38 0000000F F6E3                            MUL BL
+    39                                          ; AX = AL * 20
+    40                                          ; AX = 20*(b-a+2)
+    41 00000011 6689C3                          MOV BX , AX
+    42                                          ; BX = 20*(b-a+2)
+    43                                          
+    44 00000014 B00A                            MOV AL , 10
+    45 00000016 F625[02000000]                  MUL byte[c]
+    46                                          ; AX = c * 10
+    47                                          
+    48 0000001C 6629C3                          SUB BX , AX
+    49                                          ; BX = BX - AX
+    50                                          ; BX = 20*(b-a+2)-10*c
+    51                                          
+    52 0000001F 6689D8                          MOV AX , BX
+    53                                          ; AX = 20*(b-a+2)-10*c
+    54                                          
+    55 00000022 66BB0300                        MOV BX , 3
+    56 00000026 66F7E3                          MUL BX
+    57                                          ; DX:AX = AX*3
+    58                                          ; DX:AX = 3*[20*(b-a+2)-10*c]
+    59                                          
+    60 00000029 6689C3                          MOV BX , AX
+    61 0000002C 6689D1                          MOV CX , DX
+    62                                          ; CX:BX = 3*[20*(b-a+2)-10*c]
+    63                                          
+    64 0000002F 66B8[0300]                      MOV AX , d
+    65                                          ; AX = d
+    66 00000033 6683E803                        SUB AX , 3
+    67                                          ; AX = d - 3
+    68 00000037 66BB0200                        MOV BX , 2
+    69 0000003B 66F7E3                          MUL BX
+    70                                          ; DX:AX = 2*(d-3)
+    71                                          
+    72 0000003E 6601D8                          ADD AX , BX
+    73 00000041 6611CA                          ADC DX , CX
+    74                                          
+    75                                          
+    76                                          
+    77                                      
+    78                                          ; exit(0)
+    79 00000044 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    80 00000046 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

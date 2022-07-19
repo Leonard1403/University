@@ -1,0 +1,676 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit , printf , scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  
+     9                                  import scanf msvcrt.dll
+    10                                  import printf msvcrt.dll
+    11                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    12                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    13                                  
+    14                                  ; our data is declared here (the variables needed by our program)
+    15                                  segment data use32 class=data
+    16                                      ; ...
+    17 00000000 00000000                    da dd 0
+    18 00000004 4100                        valoarea10 db 'A' , 0
+    19 00000006 4200                        valoarea11 db 'B' , 0
+    20 00000008 4300                        valoarea12 db 'C' , 0
+    21 0000000A 4400                        valoarea13 db 'D' , 0
+    22 0000000C 4500                        valoarea14 db 'E' , 0
+    23 0000000E 4600                        valoarea15 db 'F' , 0
+    24                                      ;e10 db 10
+    25                                      ;e11 db 11
+    26                                      ;e12 db 12
+    27                                      ;e13 db 13
+    28                                      ;e14 db 14 
+    29                                      ;e15 db 15
+    30                                      
+    31 00000010 00000000                    poz0 dd 0
+    32 00000014 00000000                    poz1 dd 0
+    33 00000018 00000000                    poz2 dd 0
+    34 0000001C 00000000                    poz3 dd 0
+    35 00000020 00000000                    poz4 dd 0
+    36 00000024 00000000                    poz5 dd 0
+    37 00000028 00000000                    poz6 dd 0
+    38 0000002C 00000000                    poz7 dd 0
+    39 00000030 00000000                    poz8 dd 0
+    40                                      
+    41                                      len equ 7
+    42 00000034 FF<rept>                    sir times len db -1
+    43 0000003B 01000000                    put dd 1
+    44 0000003F 00                          restul db 0
+    45 00000040 00                          ce db 0 
+    46 00000041 00000000                    rezultat dd 0 
+    47 00000045 00000000                    copie dd 0
+    48 00000049 00000000                    copie_ecx dd 0
+    49 0000004D 256400                      citire db '%d' , 0
+    50 00000050 256300                      afisare_c db '%c' , 0
+    51 00000053 02000000                    div2 dd 2
+    52 00000057 0A000000                    div10 dd 10
+    53 0000005B 10000000                    div16 dd 16
+    54 0000005F 76616C6F6172653A20-         mesaj_afisare db 'valoare: ', 0
+    54 00000068 00                 
+    55 00000069 72657A756C74617475-         mesaj_rezultat db 'rezultatul: ', 0
+    55 00000072 6C3A2000           
+    56 00000076 76616C6F6172653A20-         afisare_variabile db 'valoare: %d' , 10
+    56 0000007F 25640A             
+    57                                      
+    58                                  ; our code starts here
+    59                                  segment code use32 class=code
+    60                                      start:
+    61                                          ; ...
+    62                                          
+    63 00000000 68[5F000000]                    push mesaj_afisare
+    64 00000005 FF15[00000000]                  call [printf]
+    65 0000000B 83C404                          add esp, 4
+    66                                          
+    67 0000000E 68[00000000]                    push dword da
+    68 00000013 68[4D000000]                    push dword citire
+    69 00000018 FF15[00000000]                  call [scanf]
+    70 0000001E 83C408                          add esp , 4*2
+    71 00000021 B900000000                      mov ecx , 0
+    72                                          ;mov ecx , 1 ; puterile lui 2 
+    73                                          
+    74                                          
+    75                                          repeta:
+    76 00000026 A1[00000000]                        mov eax , dword [da]
+    77 0000002B 99                                  cdq
+    78                                              ;mov edx , [da+4]
+    79                                              ;mov edx , dword [da+4]
+    80 0000002C F735[57000000]                      div dword [div10]
+    81 00000032 8915[3F000000]                      mov [restul] , edx
+    82                                              ;cwd
+    83                                              
+    84                                              ;mov [da+0] , eax
+    85                                              ;mov [da+4] , edx
+    86 00000038 A3[00000000]                        mov [da] , eax
+    87                                              ;cmp 
+    88                                              
+    89                                              ;-----------------------------------------
+    90 0000003D A1[3F000000]                        mov eax , [restul]
+    91                                              ;mov edx , 0
+    92 00000042 F725[3B000000]                      mul dword [put]
+    93                                              ;mov [ce] , eax
+    94                                              
+    95                                              ;add [rezultat+0] , eax
+    96                                              ;adc [rezultat+4] , edx
+    97                                             
+    98 00000048 01C1                                add ecx , eax
+    99                                              ;mov [rezultat] , ecx
+   100                                  
+   101                                              
+   102                                              
+   103                                              
+   104 0000004A A1[3B000000]                        mov eax , dword [put]
+   105 0000004F F725[53000000]                      mul dword [div2]
+   106 00000055 A3[3B000000]                        mov [put] , eax
+   107                                              
+   108                                               
+   109                                              ;-----------------------------------------
+   110                                              
+   111                                              ;push ecx
+   112                                              ;push afisare_variabile
+   113                                              ;call [printf]
+   114                                              ;add esp , 4*2
+   115                                              
+   116 0000005A 833D[00000000]00                    cmp dword [da] , 0
+   117 00000061 75C3                            jne repeta
+   118                                          
+   119                                          ;push ecx
+   120                                          ;push afisare_variabile
+   121                                          ;call [printf]
+   122                                          ;add esp , 4*2
+   123                                          
+   124 00000063 890D[41000000]                  mov [rezultat] , ecx
+   125 00000069 89C8                            mov eax , ecx ; eax rezultatul
+   126 0000006B BB00000000                      mov ebx , 0
+   127                                          ;mov ecx , 7
+   128 00000070 BA00000000                      mov edx , 0
+   129                                          
+   130 00000075 68[69000000]                    push dword mesaj_rezultat
+   131 0000007A FF15[00000000]                  call [printf]
+   132 00000080 83C404                          add esp, 4
+   133                                          
+   134 00000083 A1[41000000]                    mov eax , [rezultat]
+   135 00000088 BB00000000                      mov ebx , 0 
+   136 0000008D BA00000000                      mov edx , 0
+   137                                          
+   138                                          ;push mesaj_rezultat
+   139                                          ;call [printf]
+   140                                          ;add esp, 4
+   141                                          
+   142 00000092 99                              cdq
+   143 00000093 F735[5B000000]                  div dword [div16]
+   144                                          ;edx restul
+   145 00000099 8915[14000000]                  mov [poz1] , edx
+   146 0000009F 8B0D[14000000]                  mov ecx , [poz1]
+   147 000000A5 83F800                          cmp eax , 0
+   148 000000A8 0F8420050000                    je stop1
+   149                                          
+   150 000000AE 99                              cdq
+   151 000000AF F735[5B000000]                  div dword [div16]
+   152                                          ;edx restul
+   153 000000B5 8915[18000000]                  mov [poz2] , edx
+   154 000000BB 8B0D[18000000]                  mov ecx , [poz2]
+   155 000000C1 83F800                          cmp eax , 0
+   156 000000C4 0F8464040000                    je stop2
+   157                                          
+   158 000000CA 99                              cdq
+   159 000000CB F735[5B000000]                  div dword [div16]
+   160                                          ;edx restul
+   161 000000D1 8915[1C000000]                  mov [poz3] , edx
+   162 000000D7 8B0D[1C000000]                  mov ecx , [poz3]
+   163 000000DD 83F800                          cmp eax , 0
+   164 000000E0 0F84A8030000                    je stop3
+   165                                          
+   166 000000E6 99                              cdq
+   167 000000E7 F735[5B000000]                  div dword [div16]
+   168                                          ;edx restul
+   169 000000ED 8915[20000000]                  mov [poz4] , edx
+   170 000000F3 8B0D[20000000]                  mov ecx , [poz4]
+   171 000000F9 83F800                          cmp eax , 0
+   172 000000FC 0F84EC020000                    je stop4
+   173                                          
+   174 00000102 99                              cdq
+   175 00000103 F735[5B000000]                  div dword [div16]
+   176                                          ;edx restul
+   177 00000109 8915[24000000]                  mov [poz5] , edx
+   178 0000010F 8B0D[24000000]                  mov ecx , [poz5]
+   179 00000115 83F800                          cmp eax , 0
+   180 00000118 0F8430020000                    je stop5
+   181                                          
+   182 0000011E 99                              cdq
+   183 0000011F F735[5B000000]                  div dword [div16]
+   184                                          ;edx restul
+   185 00000125 8915[28000000]                  mov [poz6] , edx
+   186 0000012B 8B0D[28000000]                  mov ecx , [poz6]
+   187 00000131 83F800                          cmp eax , 0
+   188 00000134 0F8474010000                    je stop6
+   189                                          
+   190 0000013A 99                              cdq
+   191 0000013B F735[5B000000]                  div dword [div16]
+   192                                          ;edx restul
+   193 00000141 8915[2C000000]                  mov [poz7] , edx
+   194 00000147 8B0D[2C000000]                  mov ecx , [poz7]
+   195 0000014D 83F800                          cmp eax , 0
+   196 00000150 0F84B8000000                    je stop7
+   197                                          
+   198 00000156 99                              cdq
+   199 00000157 F735[5B000000]                  div dword [div16]
+   200                                          ;edx restul
+   201 0000015D 8915[30000000]                  mov [poz8] , edx
+   202 00000163 8B0D[30000000]                  mov ecx , [poz8]
+   203 00000169 83F800                          cmp eax , 0
+   204 0000016C 7400                            je stop8
+   205                                          
+   206                                          
+   207                                          stop8:
+   208 0000016E 833D[30000000]0A                cmp dword [poz8] , 10
+   209 00000175 7D14                            jge j10_8
+   210 00000177 FF35[30000000]                  push dword [poz8]
+   211 0000017D 68[4D000000]                    push citire
+   212 00000182 FF15[00000000]                  call [printf]
+   213 00000188 83C408                          add esp, 4*2
+   214                                          j10_8:
+   215                                          
+   216 0000018B 750E                            jne valoarea10_8
+   217 0000018D 68[04000000]                        push dword valoarea10
+   218                                              
+   219 00000192 FF15[00000000]                      call [printf]
+   220 00000198 83C408                              add esp, 4*2
+   221                                          valoarea10_8:
+   222                                          
+   223 0000019B 833D[30000000]0B                cmp dword [poz8] , 11
+   224 000001A2 750E                            jne valoarea11_8
+   225 000001A4 68[06000000]                        push dword valoarea11
+   226                                             
+   227 000001A9 FF15[00000000]                      call [printf]
+   228 000001AF 83C408                              add esp, 4*2
+   229                                          valoarea11_8:
+   230                                          
+   231 000001B2 833D[30000000]0C                cmp dword [poz8] , 12
+   232 000001B9 750E                            jne valoarea12_8
+   233 000001BB 68[08000000]                        push dword valoarea12
+   234                                  
+   235 000001C0 FF15[00000000]                      call [printf]
+   236 000001C6 83C408                              add esp, 4*2
+   237                                          valoarea12_8:
+   238                                          
+   239 000001C9 833D[30000000]0D                cmp dword [poz8] , 13
+   240 000001D0 750E                            jne valoarea13_8
+   241 000001D2 68[0A000000]                        push dword valoarea13
+   242                                        
+   243 000001D7 FF15[00000000]                      call [printf]
+   244 000001DD 83C408                              add esp, 4*2
+   245                                          valoarea13_8:
+   246                                          
+   247 000001E0 833D[30000000]0E                cmp dword [poz8] , 14
+   248 000001E7 750E                            jne valoarea14_8
+   249 000001E9 68[0C000000]                        push dword valoarea14
+   250                                          
+   251 000001EE FF15[00000000]                      call [printf]
+   252 000001F4 83C408                              add esp, 4*2
+   253                                          valoarea14_8:
+   254                                    
+   255 000001F7 833D[30000000]0F                cmp dword [poz8] , 15
+   256 000001FE 750E                            jne valoarea15_8
+   257 00000200 68[0E000000]                        push dword valoarea15
+   258                                          
+   259 00000205 FF15[00000000]                      call [printf]
+   260 0000020B 83C408                              add esp, 4*2
+   261                                          valoarea15_8:
+   262                                   
+   263                                          
+   264                                          stop7:
+   265 0000020E 833D[2C000000]0A                cmp dword [poz7] , 10
+   266 00000215 7D14                            jge j10_7
+   267 00000217 FF35[2C000000]                  push dword [poz7]
+   268 0000021D 68[4D000000]                    push citire
+   269 00000222 FF15[00000000]                  call [printf]
+   270 00000228 83C408                          add esp, 4*2
+   271                                          j10_7:
+   272                                          
+   273 0000022B 750E                            jne valoarea10_7
+   274 0000022D 68[04000000]                        push dword valoarea10
+   275                                         
+   276 00000232 FF15[00000000]                      call [printf]
+   277 00000238 83C408                              add esp, 4*2
+   278                                          valoarea10_7:
+   279                                          
+   280 0000023B 833D[2C000000]0B                cmp dword [poz7] , 11
+   281 00000242 750E                            jne valoarea11_7
+   282 00000244 68[06000000]                        push dword valoarea11
+   283                                        
+   284 00000249 FF15[00000000]                      call [printf]
+   285 0000024F 83C408                              add esp, 4*2
+   286                                          valoarea11_7:
+   287                                          
+   288 00000252 833D[2C000000]0C                cmp dword [poz7] , 12
+   289 00000259 750E                            jne valoarea12_7
+   290 0000025B 68[08000000]                        push dword valoarea12
+   291                                        
+   292 00000260 FF15[00000000]                      call [printf]
+   293 00000266 83C408                              add esp, 4*2
+   294                                          valoarea12_7:
+   295                                          
+   296 00000269 833D[2C000000]0D                cmp dword [poz7] , 13
+   297 00000270 750E                            jne valoarea13_7
+   298 00000272 68[0A000000]                        push dword valoarea13
+   299                                            
+   300 00000277 FF15[00000000]                      call [printf]
+   301 0000027D 83C408                              add esp, 4*2
+   302                                          valoarea13_7:
+   303                                          
+   304 00000280 833D[2C000000]0E                cmp dword [poz7] , 14
+   305 00000287 750E                            jne valoarea14_7
+   306 00000289 68[0C000000]                        push dword valoarea14
+   307                                           
+   308 0000028E FF15[00000000]                      call [printf]
+   309 00000294 83C408                              add esp, 4*2
+   310                                          valoarea14_7:
+   311                                    
+   312 00000297 833D[2C000000]0F                cmp dword [poz7] , 15
+   313 0000029E 750E                            jne valoarea15_7
+   314 000002A0 68[0E000000]                        push dword valoarea15
+   315                                         
+   316 000002A5 FF15[00000000]                      call [printf]
+   317 000002AB 83C408                              add esp, 4*2
+   318                                          valoarea15_7:
+   319                                          
+   320                                          
+   321                                          
+   322                                          stop6:
+   323 000002AE 833D[28000000]0A                cmp dword [poz6] , 10
+   324 000002B5 7D14                            jge j10_6
+   325 000002B7 FF35[28000000]                  push dword [poz6]
+   326 000002BD 68[4D000000]                    push citire
+   327 000002C2 FF15[00000000]                  call [printf]
+   328 000002C8 83C408                          add esp, 4*2
+   329                                          j10_6:
+   330                                          
+   331 000002CB 750E                            jne valoarea10_6
+   332 000002CD 68[04000000]                        push dword valoarea10
+   333                                      
+   334 000002D2 FF15[00000000]                      call [printf]
+   335 000002D8 83C408                              add esp, 4*2
+   336                                          valoarea10_6:
+   337                                          
+   338 000002DB 833D[28000000]0B                cmp dword [poz6] , 11
+   339 000002E2 750E                            jne valoarea11_6
+   340 000002E4 68[06000000]                        push dword valoarea11
+   341                                   
+   342 000002E9 FF15[00000000]                      call [printf]
+   343 000002EF 83C408                              add esp, 4*2
+   344                                          valoarea11_6:
+   345                                          
+   346 000002F2 833D[28000000]0C                cmp dword [poz6] , 12
+   347 000002F9 750E                            jne valoarea12_6
+   348 000002FB 68[08000000]                        push dword valoarea12
+   349                                             
+   350 00000300 FF15[00000000]                      call [printf]
+   351 00000306 83C408                              add esp, 4*2
+   352                                          valoarea12_6:
+   353                                          
+   354 00000309 833D[28000000]0D                cmp dword [poz6] , 13
+   355 00000310 750E                            jne valoarea13_6
+   356 00000312 68[0A000000]                        push dword valoarea13
+   357                                           
+   358 00000317 FF15[00000000]                      call [printf]
+   359 0000031D 83C408                              add esp, 4*2
+   360                                          valoarea13_6:
+   361                                          
+   362 00000320 833D[28000000]0E                cmp dword [poz6] , 14
+   363 00000327 750E                            jne valoarea14_6
+   364 00000329 68[0C000000]                        push dword valoarea14
+   365                                         
+   366 0000032E FF15[00000000]                      call [printf]
+   367 00000334 83C408                              add esp, 4*2
+   368                                          valoarea14_6:
+   369                                    
+   370 00000337 833D[28000000]0F                cmp dword [poz6] , 15
+   371 0000033E 750E                            jne valoarea15_6
+   372 00000340 68[0E000000]                        push dword valoarea15
+   373                                            
+   374 00000345 FF15[00000000]                      call [printf]
+   375 0000034B 83C408                              add esp, 4*2
+   376                                          valoarea15_6:
+   377                                          
+   378                                          
+   379                                          
+   380                                          stop5:
+   381 0000034E 833D[24000000]0A                cmp dword [poz5] , 10
+   382 00000355 7D14                            jge j10_5
+   383 00000357 FF35[24000000]                  push dword [poz5]
+   384 0000035D 68[4D000000]                    push citire
+   385 00000362 FF15[00000000]                  call [printf]
+   386 00000368 83C408                          add esp, 4*2
+   387                                          j10_5:
+   388                                          
+   389 0000036B 750E                            jne valoarea10_5
+   390 0000036D 68[04000000]                        push dword valoarea10
+   391                                            
+   392 00000372 FF15[00000000]                      call [printf]
+   393 00000378 83C408                              add esp, 4*2
+   394                                          valoarea10_5:
+   395                                          
+   396 0000037B 833D[24000000]0B                cmp dword [poz5] , 11
+   397 00000382 750E                            jne valoarea11_5
+   398 00000384 68[06000000]                        push dword valoarea11
+   399                                          
+   400 00000389 FF15[00000000]                      call [printf]
+   401 0000038F 83C408                              add esp, 4*2
+   402                                          valoarea11_5:
+   403                                          
+   404 00000392 833D[24000000]0C                cmp dword [poz5] , 12
+   405 00000399 750E                            jne valoarea12_5
+   406 0000039B 68[08000000]                        push dword valoarea12
+   407                                             
+   408 000003A0 FF15[00000000]                      call [printf]
+   409 000003A6 83C408                              add esp, 4*2
+   410                                          valoarea12_5:
+   411                                          
+   412 000003A9 833D[24000000]0D                cmp dword [poz5] , 13
+   413 000003B0 750E                            jne valoarea13_5
+   414 000003B2 68[0A000000]                        push dword valoarea13
+   415                                            
+   416 000003B7 FF15[00000000]                      call [printf]
+   417 000003BD 83C408                              add esp, 4*2
+   418                                          valoarea13_5:
+   419                                          
+   420 000003C0 833D[24000000]0E                cmp dword [poz5] , 14
+   421 000003C7 750E                            jne valoarea14_5
+   422 000003C9 68[0C000000]                        push dword valoarea14
+   423                                           
+   424 000003CE FF15[00000000]                      call [printf]
+   425 000003D4 83C408                              add esp, 4*2
+   426                                          valoarea14_5:
+   427                                    
+   428 000003D7 833D[24000000]0F                cmp dword [poz5] , 15
+   429 000003DE 750E                            jne valoarea15_5
+   430 000003E0 68[0E000000]                        push dword valoarea15
+   431                                          
+   432 000003E5 FF15[00000000]                      call [printf]
+   433 000003EB 83C408                              add esp, 4*2
+   434                                          valoarea15_5:
+   435                                          
+   436                                          
+   437                                          
+   438                                          stop4:
+   439 000003EE 833D[20000000]0A                cmp dword [poz4] , 10
+   440 000003F5 7D14                            jge j10_4
+   441 000003F7 FF35[20000000]                  push dword [poz4]
+   442 000003FD 68[4D000000]                    push citire
+   443 00000402 FF15[00000000]                  call [printf]
+   444 00000408 83C408                          add esp, 4*2
+   445                                          j10_4:
+   446                                          
+   447 0000040B 750E                            jne valoarea10_4
+   448 0000040D 68[04000000]                        push dword valoarea10
+   449                                          
+   450 00000412 FF15[00000000]                      call [printf]
+   451 00000418 83C408                              add esp, 4*2
+   452                                          valoarea10_4:
+   453                                          
+   454 0000041B 833D[20000000]0B                cmp dword [poz4] , 11
+   455 00000422 750E                            jne valoarea11_4
+   456 00000424 68[06000000]                        push dword valoarea11
+   457                                           
+   458 00000429 FF15[00000000]                      call [printf]
+   459 0000042F 83C408                              add esp, 4*2
+   460                                          valoarea11_4:
+   461                                          
+   462 00000432 833D[20000000]0C                cmp dword [poz4] , 12
+   463 00000439 750E                            jne valoarea12_4
+   464 0000043B 68[08000000]                        push dword valoarea12
+   465                                             
+   466 00000440 FF15[00000000]                      call [printf]
+   467 00000446 83C408                              add esp, 4*2
+   468                                          valoarea12_4:
+   469                                          
+   470 00000449 833D[20000000]0D                cmp dword [poz4] , 13
+   471 00000450 750E                            jne valoarea13_4
+   472 00000452 68[0A000000]                        push dword valoarea13
+   473                                             
+   474 00000457 FF15[00000000]                      call [printf]
+   475 0000045D 83C408                              add esp, 4*2
+   476                                          valoarea13_4:
+   477                                          
+   478 00000460 833D[20000000]0E                cmp dword [poz4] , 14
+   479 00000467 750E                            jne valoarea14_4
+   480 00000469 68[0C000000]                        push dword valoarea14
+   481                                           
+   482 0000046E FF15[00000000]                      call [printf]
+   483 00000474 83C408                              add esp, 4*2
+   484                                          valoarea14_4:
+   485                                    
+   486 00000477 833D[20000000]0F                cmp dword [poz4] , 15
+   487 0000047E 750E                            jne valoarea15_4
+   488 00000480 68[0E000000]                        push dword valoarea15
+   489                                         
+   490 00000485 FF15[00000000]                      call [printf]
+   491 0000048B 83C408                              add esp, 4*2
+   492                                          valoarea15_4:
+   493                                          
+   494                                          
+   495                                          
+   496                                          stop3:
+   497 0000048E 833D[1C000000]0A                cmp dword [poz3] , 10
+   498 00000495 7D14                            jge j10_3
+   499 00000497 FF35[1C000000]                  push dword [poz3]
+   500 0000049D 68[4D000000]                    push citire
+   501 000004A2 FF15[00000000]                  call [printf]
+   502 000004A8 83C408                          add esp, 4*2
+   503                                          j10_3:
+   504                                          
+   505 000004AB 750E                            jne valoarea10_3
+   506 000004AD 68[04000000]                        push dword valoarea10
+   507                                          
+   508 000004B2 FF15[00000000]                      call [printf]
+   509 000004B8 83C408                              add esp, 4*2
+   510                                          valoarea10_3:
+   511                                          
+   512 000004BB 833D[1C000000]0B                cmp dword [poz3] , 11
+   513 000004C2 750E                            jne valoarea11_3
+   514 000004C4 68[06000000]                        push dword valoarea11
+   515                                          
+   516 000004C9 FF15[00000000]                      call [printf]
+   517 000004CF 83C408                              add esp, 4*2
+   518                                          valoarea11_3:
+   519                                          
+   520 000004D2 833D[1C000000]0C                cmp dword [poz3] , 12
+   521 000004D9 750E                            jne valoarea12_3
+   522 000004DB 68[08000000]                        push dword valoarea12
+   523                                             
+   524 000004E0 FF15[00000000]                      call [printf]
+   525 000004E6 83C408                              add esp, 4*2
+   526                                          valoarea12_3:
+   527                                          
+   528 000004E9 833D[1C000000]0D                cmp dword [poz3] , 13
+   529 000004F0 750E                            jne valoarea13_3
+   530 000004F2 68[0A000000]                        push dword valoarea13
+   531                                          
+   532 000004F7 FF15[00000000]                      call [printf]
+   533 000004FD 83C408                              add esp, 4*2
+   534                                          valoarea13_3:
+   535                                          
+   536 00000500 833D[1C000000]0E                cmp dword [poz3] , 14
+   537 00000507 750E                            jne valoarea14_3
+   538 00000509 68[0C000000]                        push dword valoarea14
+   539                                            
+   540 0000050E FF15[00000000]                      call [printf]
+   541 00000514 83C408                              add esp, 4*2
+   542                                          valoarea14_3:
+   543                                    
+   544 00000517 833D[1C000000]0F                cmp dword [poz3] , 15
+   545 0000051E 750E                            jne valoarea15_3
+   546 00000520 68[0E000000]                        push dword valoarea15
+   547                                      
+   548 00000525 FF15[00000000]                      call [printf]
+   549 0000052B 83C408                              add esp, 4*2
+   550                                          valoarea15_3:
+   551                                          
+   552                                          
+   553                                          
+   554                                          stop2:
+   555 0000052E 833D[18000000]0A                cmp dword [poz2] , 10
+   556 00000535 7D14                            jge j10_2
+   557 00000537 FF35[18000000]                  push dword [poz2]
+   558 0000053D 68[4D000000]                    push citire
+   559 00000542 FF15[00000000]                  call [printf]
+   560 00000548 83C408                          add esp, 4*2
+   561                                          j10_2:
+   562                                          
+   563 0000054B 750E                            jne valoarea10_2
+   564 0000054D 68[04000000]                        push dword valoarea10
+   565                                          
+   566 00000552 FF15[00000000]                      call [printf]
+   567 00000558 83C408                              add esp, 4*2
+   568                                          valoarea10_2:
+   569                                          
+   570 0000055B 833D[18000000]0B                cmp dword [poz2] , 11
+   571 00000562 750E                            jne valoarea11_2
+   572 00000564 68[06000000]                        push dword valoarea11
+   573                                           
+   574 00000569 FF15[00000000]                      call [printf]
+   575 0000056F 83C408                              add esp, 4*2
+   576                                          valoarea11_2:
+   577                                          
+   578 00000572 833D[18000000]0C                cmp dword [poz2] , 12
+   579 00000579 750E                            jne valoarea12_2
+   580 0000057B 68[08000000]                        push dword valoarea12
+   581                                          
+   582 00000580 FF15[00000000]                      call [printf]
+   583 00000586 83C408                              add esp, 4*2
+   584                                          valoarea12_2:
+   585                                          
+   586 00000589 833D[18000000]0D                cmp dword [poz2] , 13
+   587 00000590 750E                            jne valoarea13_2
+   588 00000592 68[0A000000]                        push dword valoarea13
+   589                                        
+   590 00000597 FF15[00000000]                      call [printf]
+   591 0000059D 83C408                              add esp, 4*2
+   592                                          valoarea13_2:
+   593                                          
+   594 000005A0 833D[18000000]0E                cmp dword [poz2] , 14
+   595 000005A7 750E                            jne valoarea14_2
+   596 000005A9 68[0C000000]                        push dword valoarea14
+   597                                            
+   598 000005AE FF15[00000000]                      call [printf]
+   599 000005B4 83C408                              add esp, 4*2
+   600                                          valoarea14_2:
+   601                                    
+   602 000005B7 833D[18000000]0F                cmp dword [poz2] , 15
+   603 000005BE 750E                            jne valoarea15_2
+   604 000005C0 68[0E000000]                        push dword valoarea15
+   605                                          
+   606 000005C5 FF15[00000000]                      call [printf]
+   607 000005CB 83C408                              add esp, 4*2
+   608                                          valoarea15_2:
+   609                                          
+   610                                          
+   611                                          
+   612                                          stop1:
+   613 000005CE 833D[14000000]0A                cmp dword [poz1] , 10
+   614 000005D5 7D14                            jge j10_1
+   615 000005D7 FF35[14000000]                  push dword [poz1]
+   616 000005DD 68[4D000000]                    push citire
+   617 000005E2 FF15[00000000]                  call [printf]
+   618 000005E8 83C408                          add esp, 4*2
+   619                                          j10_1:
+   620                                          
+   621 000005EB 750E                            jne valoarea10_1
+   622 000005ED 68[04000000]                        push dword valoarea10
+   623                                          
+   624 000005F2 FF15[00000000]                      call [printf]
+   625 000005F8 83C408                              add esp, 4*2
+   626                                          valoarea10_1:
+   627                                          
+   628 000005FB 833D[14000000]0B                cmp dword [poz1] , 11
+   629 00000602 750E                            jne valoarea11_1
+   630 00000604 68[06000000]                        push dword valoarea11
+   631                                         
+   632 00000609 FF15[00000000]                      call [printf]
+   633 0000060F 83C408                              add esp, 4*2
+   634                                          valoarea11_1:
+   635                                          
+   636 00000612 833D[14000000]0C                cmp dword [poz1] , 12
+   637 00000619 750E                            jne valoarea12_1
+   638 0000061B 68[08000000]                        push dword valoarea12
+   639                                            
+   640 00000620 FF15[00000000]                      call [printf]
+   641 00000626 83C408                              add esp, 4*2
+   642                                          valoarea12_1:
+   643                                          
+   644 00000629 833D[14000000]0D                cmp dword [poz1] , 13
+   645 00000630 750E                            jne valoarea13_1
+   646 00000632 68[0A000000]                        push dword valoarea13
+   647                                          
+   648 00000637 FF15[00000000]                      call [printf]
+   649 0000063D 83C408                              add esp, 4*2
+   650                                          valoarea13_1:
+   651                                          
+   652 00000640 833D[14000000]0E                cmp dword [poz1] , 14
+   653 00000647 750E                            jne valoarea14_1
+   654 00000649 68[0C000000]                        push dword valoarea14
+   655                                          
+   656 0000064E FF15[00000000]                      call [printf]
+   657 00000654 83C408                              add esp, 4*2
+   658                                          valoarea14_1:
+   659                                    
+   660 00000657 833D[14000000]0F                cmp dword [poz1] , 15
+   661 0000065E 750E                            jne valoarea15_1
+   662 00000660 68[0E000000]                        push dword valoarea15
+   663                                             
+   664 00000665 FF15[00000000]                      call [printf]
+   665 0000066B 83C408                              add esp, 4*2
+   666                                          valoarea15_1:
+   667                                          
+   668                                          
+   669                                          
+   670                                          
+   671                                          ; exit(0)
+   672 0000066E 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   673 00000670 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
