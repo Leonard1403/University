@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AgentiedeTurismGUI.cpp">
+      <Filter>QT</Filter>
+    </ClCompile>
+    <ClCompile Include="Repository.cpp">
+      <Filter>Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="Service.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Wishlist.cpp">
+      <Filter>Wishlist</Filter>
+    </ClCompile>
+    <ClCompile Include="Turism.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="WishlistCRUD_GUI.cpp">
+      <Filter>Wishlist</Filter>
+    </ClCompile>
+    <ClCompile Include="WishlistREAD_GUI.cpp">
+      <Filter>Wishlist</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="QT">
+      <UniqueIdentifier>{ba184bdd-d3ce-481b-883a-723b5288393f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source File">
+      <UniqueIdentifier>{d08ce827-1520-449d-9c1e-87274082b027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain">
+      <UniqueIdentifier>{bdd7b168-edde-464e-affa-d0c098ae16c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{b2774c8d-51ca-4b51-80f5-96320662df6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wishlist">
+      <UniqueIdentifier>{7815d0ea-9ce3-4f62-95a1-4233fbde7e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Repository">
+      <UniqueIdentifier>{c38ddf7e-f401-436c-852d-6cc4661e0a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{eea84682-de3f-4f02-bc21-327d20c7e90b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{733cebe4-2dbd-4ac5-822d-204bad0a57e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Undo">
+      <UniqueIdentifier>{e3d7d28a-96f2-45b6-a612-6a77a669b783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Validators">
+      <UniqueIdentifier>{b71b4619-2938-4ff5-a298-29dfdfdf8cd8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AgentiedeTurismGUI.h">
+      <Filter>QT</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="AgentiedeTurismGUI.qrc">
+      <Filter>Source File</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="AgentiedeTurismGUI.ui">
+      <Filter>Source File</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Repository.h">
+      <Filter>Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Turism.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="undo.h">
+      <Filter>Undo</Filter>
+    </ClInclude>
+    <ClInclude Include="validators.h">
+      <Filter>Validators</Filter>
+    </ClInclude>
+    <ClInclude Include="Wishlist.h">
+      <Filter>Wishlist</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="observer.h">
+      <Filter>Wishlist</Filter>
+    </ClInclude>
+    <ClInclude Include="WishlistCRUD_GUI.h">
+      <Filter>Wishlist</Filter>
+    </ClInclude>
+    <ClInclude Include="WishlistREAD_GUI.h">
+      <Filter>Wishlist</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
+    <Text Include="test_program.txt" />
+    <Text Include="oferte.txt">
+      <Filter>Source File</Filter>
+    </Text>
+    <Text Include="wishlist.txt" />
+  </ItemGroup>
+</Project>

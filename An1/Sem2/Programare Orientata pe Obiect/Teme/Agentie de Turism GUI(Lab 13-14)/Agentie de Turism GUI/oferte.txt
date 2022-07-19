@@ -1,0 +1,5 @@
+La prapastia din vale;Cluj-Napoca;deal;200
+Gradina botanica;Cluj-Napoca;munte;9800
+La Veriku;Cluj-Napoca;atelier auto;500
+Hotel Roman;Roman;hotel;200
+Hotel Belvedere;Cluj-Napoca;hotel;200
