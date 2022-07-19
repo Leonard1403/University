@@ -1,6 +1,6 @@
 # All Tasks
 
-[Tips]: for good stuf , look at Agentie de Turism GUI(Lab 13-14)
+[Tips]: for good stuff , look at Agentie de Turism GUI(Lab 13-14)
 
 Check [Agentie de Turism GUI(Lab 13-14)](https://github.com/Leonard1403/University/tree/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)) for the final project
 
