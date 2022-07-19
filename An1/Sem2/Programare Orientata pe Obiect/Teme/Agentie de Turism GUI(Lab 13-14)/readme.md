@@ -49,3 +49,6 @@ This paint the offerts from the wishlist(i used an observe class that looks in w
 
 9. In this box u need to put a number that will provide u some random offerts in wishlist
 ![rand_](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI%20-%20Copie%20(3).png)
+
+10. And the final corner, the export file , which u can put a file for exporting the offerts.
+![rand_export](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Programare%20Orientata%20pe%20Obiect/Teme/Agentie%20de%20Turism%20GUI(Lab%2013-14)/images/GUI%20-%20Copie%20(2).png)
