@@ -1,0 +1,9 @@
+Scrieți 2 programe c, A și B. A va crea 2 procese p1 și p2. p1 va
+au furnizat (prin orice mijloc (necesar)) un fișier care conține doar numere (cum ar fi
+multe după cum doriți), atunci se va citi de la intrarea standard (tastatură)
+un număr (n). p1 va trimite primele n numere din fișier către p2 prin conductă.
+p2 va trimite suma tuturor numerelor impare primite către B, prin fifo.
+B va afișa pe ieșirea standard (consola) numărul primit.
+Fișierul sursă trebuie compilat folosind gcc cu opțiuni -Wall -g FĂRĂ AVERTIZĂRI SAU ERORI DE SINTAXĂ!!!
+Pierderile de memorie și procesele zombie nu sunt permise
+:.
