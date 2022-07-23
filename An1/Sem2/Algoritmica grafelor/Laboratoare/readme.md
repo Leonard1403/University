@@ -49,9 +49,9 @@ minimum way to travel from a city to another city, it used one of this algorithm
 
 
 
-7. Prufer [Codification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%201/main.cpp) and [Decodification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%202/main.cpp)
+7. Prufer [Codification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%201/main.cpp) / [Decodification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%202/main.cpp)
 
-8. Huffman [Codification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%203/main.cpp) and [Decodification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%204/main.cpp)
+8. Huffman [Codification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%203/main.cpp) / [Decodification](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%204/main.cpp)
 
 9. [APM Algorithm - Kruskal](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%205/main.cpp)
 
