@@ -55,7 +55,17 @@ minimum way to travel from a city to another city, it used one of this algorithm
 
 9. [APM Algorithm - Kruskal](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%204/Problema%205/main.cpp)
 
+10. [Flux - Edmonds-Karp](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%205/Laborator%205/Problema%201/main.cpp)
+
+11. [Flux - Topological Pumping](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%205/Laborator%205/Problema%202/main.cpp)
+
+12. [Euler - Hierholzer’s](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%205/Laborator%205/Problema%203/main.cpp)
+
+13. [BKT - Coloring Graph](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%206/Problema%201/main.cpp)
+
 # Aplications
 [BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex4/main.cpp)
 
 [LEE - DFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex3/main.cpp)
+
+[Flux - Many Enters](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%206/Problema%202/main.cpp)
