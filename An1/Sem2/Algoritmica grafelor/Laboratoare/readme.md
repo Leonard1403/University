@@ -26,6 +26,14 @@ order. BFS search with queue helps, the queue is filled with nodes that are neig
 the queue is poped constantly while the queue is empty. DFS travel in graph with a recursion 
 function. First neighbourd unvisited , first walked.
 
+
+
+4. [Bellman Ford](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema%201/main.cpp)
+
+5. [Dijkstra](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema%201%20v2/main.cpp)
+
+6. [Jhonson](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema2%20v2/main.cpp)
+
 # Aplications
 [BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex4/main.cpp)
 
