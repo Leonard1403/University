@@ -17,8 +17,16 @@ Subalgorithm
 
 3. [DFS Algorithm](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex5/main.cpp)
 
+Subalgorithm
+
+![DFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/SS/dfs.png)
+
+Those algorithms are for traveling in a graph. They visit all the nodes , but not in the same
+order. BFS search with queue helps, the queue is filled with nodes that are neighbours, and 
+the queue is poped constantly while the queue is empty. DFS travel in graph with a recursion 
+function. First neighbourd unvisited , first walked.
 
 # Aplications
 [BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex4/main.cpp)
 
-[LEE - DFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex3/main.cpp))
+[LEE - DFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex3/main.cpp)
