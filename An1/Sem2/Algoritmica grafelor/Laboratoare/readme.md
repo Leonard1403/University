@@ -15,10 +15,10 @@ Subalgorithm
 
 ![BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/SS/bfs.png)
 
-3. [Lee Algorithm](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex3/main.cpp)
-
-4. [DFS Algorithm](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex5/main.cpp)
+3. [DFS Algorithm](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex5/main.cpp)
 
 
 # Aplications
 [BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex4/main.cpp)
+
+[LEE - DFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex3/main.cpp))
