@@ -30,9 +30,21 @@ function. First neighbourd unvisited , first walked.
 
 4. [Bellman Ford](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema%201/main.cpp)
 
+Subalgorithm
+
+![Bellman Ford](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/SS/bellmanford.png)
+
 5. [Dijkstra](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema%201%20v2/main.cpp)
 
+Subalgorithm
+
+![Dijkstra](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/SS/dijkstra.png)
+
 6. [Jhonson](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%203/Problema2%20v2/main.cpp)
+
+Those algorithms are for finding the minimum ammount for traveling in a graph with costs.
+Those algorithms have many applications in GPS problems, when the gps try to find a 
+minimum way to travel from a city to another city, it used one of this algorithms.
 
 # Aplications
 [BFS](https://github.com/Leonard1403/University/blob/master/An1/Sem2/Algoritmica%20grafelor/Laboratoare/Laborator%202/Ex4/main.cpp)
