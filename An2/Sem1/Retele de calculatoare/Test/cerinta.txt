@@ -1,0 +1,18 @@
+BUS
+
+Consideram un Bus cu mai multe locuri libere. 
+Busul va fi serverul, iar numarul de locuri din bus va fi setat de catre server
+Locurile vor fi ocupate de catre clienti, fiecare client va ocupa un loc unic, 
+astfel incat in cazul in care va veni un controlor , clientul sa afiseze pe ecran 
+locul pe care l-a primit in bus. 
+Nu consideram cazul ireal in care soferul Busului accepta clienti peste limita busului, 
+in cazul in care se doreste un client nou in bus , soferul busului va trimite clientului 
+mesajul: nu mai sunt locuri 
+in cazul in care intervine un control al busului , fiecare client trebuie sa 
+afiseze nr locului pe care l-a primit in bus.
+Pentru un client nou, portul va fi schimbat(puteti considera acest lucru 
+pe post de o statie noua, adica un client doreste sa ajunga dintr-un punct in altul)
+
+Pentru ca busul sa nu ramana constant plin va fi nevoie ca un client sa poata spune
+serverului ca doreste sa paraseasca busul, sau serverul sa poata sa dea afara 
+pe un client nepoftit.
