@@ -1,34 +1,16 @@
-# RepositoryMAP-SocialNetwork
-SocialNetwork application written in java code
+Project made in Java with graphical interface made in JavaFX.
 
-Implementaţi  oreţea de socializarecu  un  model  simplificat,  dar  din  care  să  poată  fi  extrase informaţii relevante. 
+Description:
+The project has a graphical interface for sign-in. The client logs in with the data stored in the database. In case the client doesn't have an account, they can create a new one by clicking on the sign-in button. After clicking the button, the authentication data is entered, and then the client is saved in the database. Later on, the client can connect to the database.
 
-Inițial vom implementa câteva funcționalități de bază, iar pe măsură ce vom parcurge materia, vor fi adăgate cerințe adiționale si vor fi extinse cele existente. 
+![poza1](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/1.png)
+![poza2](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/2.png)
+![poza3](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/3.png)
 
-Funcționalități de bază (cerințe funcționale):-Gestiunea  utilizatorilor:  
--operații  CRUD  (pt    a  avansa  mai  rapid  propun  să  citim  acești utilizatori, inițial dintr-un fisier csv.
--Gestiunea relațiilor de prietenie între utlizatori: adăgare/ștergere prieten
--Determnarea  comunitații din  care face parte  un anumit utilizator (componenta  conexa  a retelei care contine utlizatorul respectiv)
--Gestiunea mesajelor: trimitere/stergere mesaj 
--Adaugarea unui obiect de tipul Page 
--Gestiunea   evenimentelor:   se   va   implementa   șablonul   Observer   pentru   notificări, abonare/dezabonare la un eveniment; 
--Autentificare: logare/delogare
--Vizulare istoric evenimente pe o anumită perioadă calenadaristică
--Vizualizare istoric utilizaror pe o anumită perioadă calenadaristică
+The client has the possibility to search for a user in the application's user list, can delete a friendship, or accept a received friendship request. Behind each requirement explained in this paragraph, there is an observer that watches over all users connected to the platform, making a change in each window when something happens in one of the windows.
 
-Obs.  Vor mai  fi  adăugate  si  alte  cerințe  pe  parcurs;  aveți  posibiliatea  să  contribuiți  și  voi  la completarea acestei liste.
+![poza4](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/4.png)
 
-Modelul Conceptual si Arhitectura aplicației (cerințe nonfuncționale)
+Additionally, users can communicate with each other through messages using a chatbox.
 
-1)Entitățile  problemei  ar  putea  fi  (puteți  să  redenumiți  îm  limba  engleză  aceste  entități  și,  de asemenea, puteți identifica altele noi sau să le reprezentați altfel pe cele stabilite mai jos):
-1.Utilizator: 
-2.Prietenie
-3.Retea
-4.Mesaj
-5.Eveniment
-6....
-
-2)Relații între entități: 
--Un utilizator al rețelei are o lista de prieteni
--O prietenie se stabilește între doi utilizatori ai rețelei
--Rețeau este definită de mulțimea utilizatorilor și a relațiilor de prietenie dintre aceștia
+![poza6](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/6.png)
