@@ -1,0 +1,141 @@
+Complexity metrics,lun., 21 nov. 2022 04:34:27 EET
+Method,CogC,ev(G),iv(G),v(G)
+Main.main(String[]),0,1,1,1
+domain.Entity.getId(),0,1,1,1
+domain.Entity.setId(ID),0,1,1,1
+domain.Friendship.Friendship(),0,1,1,1
+domain.Friendship.getDate(),0,1,1,1
+domain.Friendship.setDate(LocalDateTime),0,1,1,1
+domain.Friendship.toString(),0,1,1,1
+"domain.Pair.Pair(E1, E2)",0,1,1,1
+domain.Pair.equals(Object),3,2,3,4
+domain.Pair.getLeft(),0,1,1,1
+domain.Pair.getRight(),0,1,1,1
+domain.Pair.hashCode(),0,1,1,1
+domain.Pair.setLeft(E1),0,1,1,1
+domain.Pair.setRight(E2),0,1,1,1
+domain.Pair.toString(),0,1,1,1
+"domain.Tuple.Tuple(E1, E2)",0,1,1,1
+domain.Tuple.equals(Object),3,2,3,4
+domain.Tuple.getLeft(),0,1,1,1
+domain.Tuple.getRight(),0,1,1,1
+domain.Tuple.hashCode(),0,1,1,1
+domain.Tuple.setLeft(E1),0,1,1,1
+domain.Tuple.setRight(E2),0,1,1,1
+domain.Tuple.toString(),0,1,1,1
+"domain.User.User(String, String)",0,1,1,1
+domain.User.getFirstName(),0,1,1,1
+domain.User.getLastName(),0,1,1,1
+domain.User.setFirstName(String),0,1,1,1
+domain.User.setLastName(String),0,1,1,1
+domain.User.toString(),0,1,1,1
+domain.validation.FriendshipValidator.validate(Friendship),1,2,1,2
+domain.validation.UserValidator.validate(User),4,5,1,5
+domain.validation.ValidationException.ValidationException(),0,1,1,1
+domain.validation.ValidationException.ValidationException(String),0,1,1,1
+"domain.validation.ValidationException.ValidationException(String, Throwable)",0,1,1,1
+"domain.validation.ValidationException.ValidationException(String, Throwable, boolean, boolean)",0,1,1,1
+domain.validation.ValidationException.ValidationException(Throwable),0,1,1,1
+"repository.database.FriendshipDbRepository.FriendshipDbRepository(String, String, String, Validator<Friendship>)",0,1,1,1
+"repository.database.FriendshipDbRepository.delete(Tuple<Long, Long>)",3,2,4,5
+"repository.database.FriendshipDbRepository.executeStatement(Friendship, String)",1,1,2,2
+repository.database.FriendshipDbRepository.extractFriendship(ResultSet),1,2,2,2
+repository.database.FriendshipDbRepository.findAll(),2,1,3,3
+"repository.database.FriendshipDbRepository.findOne(Tuple<Long, Long>)",4,4,2,5
+repository.database.FriendshipDbRepository.save(Friendship),1,2,1,2
+repository.database.FriendshipDbRepository.update(Friendship),0,1,1,1
+"repository.database.UserDbRepository.UserDbRepository(String, String, String, Validator<User>)",0,1,1,1
+repository.database.UserDbRepository.delete(Long),2,2,2,3
+repository.database.UserDbRepository.findAll(),2,1,3,3
+repository.database.UserDbRepository.findOne(Long),3,3,3,4
+repository.database.UserDbRepository.save(User),2,2,2,3
+repository.database.UserDbRepository.update(User),3,3,2,4
+"repository.file.AbstractFileRepository.AbstractFileRepository(String, Validator<E>)",0,1,1,1
+repository.file.AbstractFileRepository.delete(ID),1,2,1,2
+repository.file.AbstractFileRepository.loadData(),5,1,5,5
+repository.file.AbstractFileRepository.save(E),2,2,2,2
+repository.file.AbstractFileRepository.update(E),1,2,2,2
+repository.file.AbstractFileRepository.writeToFile(),3,1,3,3
+repository.file.AbstractFileRepository.writeToFile(E),1,1,2,2
+"repository.file.FriendshipFile.FriendshipFile(String, Validator<Friendship>)",0,1,1,1
+repository.file.FriendshipFile.createEntityAsString(Friendship),0,1,1,1
+repository.file.FriendshipFile.extractEntity(List<String>),2,1,3,3
+"repository.file.UserFile.UserFile(String, Validator<User>)",0,1,1,1
+repository.file.UserFile.createEntityAsString(User),0,1,1,1
+repository.file.UserFile.extractEntity(List<String>),1,1,2,2
+repository.memory.InMemoryRepository.InMemoryRepository(Validator<E>),0,1,1,1
+repository.memory.InMemoryRepository.delete(ID),1,2,1,2
+repository.memory.InMemoryRepository.findAll(),0,1,1,1
+repository.memory.InMemoryRepository.findOne(ID),1,2,1,2
+repository.memory.InMemoryRepository.save(E),3,3,2,3
+repository.memory.InMemoryRepository.update(E),2,3,2,3
+"service.Network.DFSUtil(int, boolean[], int)",6,1,4,5
+"service.Network.DFSUtils(int, boolean[])",5,1,3,4
+service.Network.Network(int),3,1,1,3
+service.Network.addFriendships(Iterable<Friendship>),0,1,1,1
+service.Network.addUsers(Iterable<User>),0,1,1,1
+service.Network.biggestComponent(),1,1,2,2
+service.Network.connectedComponents(),3,1,3,3
+"service.ServiceFriendship.ServiceFriendship(Repository<Long, User>, Repository<Tuple<Long, Long>, Friendship>)",0,1,1,1
+"service.ServiceFriendship.addFriend(Long, Long)",14,4,3,8
+"service.ServiceFriendship.deleteFriend(Long, Long)",3,4,1,4
+service.ServiceFriendship.printFr(),0,1,1,1
+"service.ServiceUser.ServiceUser(Repository<Long, User>, Repository<Tuple<Long, Long>, Friendship>)",0,1,1,1
+service.ServiceUser.delete(Long),5,2,4,5
+service.ServiceUser.findOne(Long),2,2,2,2
+service.ServiceUser.getFriends(Long),11,2,5,6
+service.ServiceUser.get_size(),3,1,3,3
+service.ServiceUser.printUs(),0,1,1,1
+"service.ServiceUser.save(String, String)",1,2,1,2
+"service.ServiceUser.update(Long, String, String)",1,2,1,2
+"userinterface.UI.UI(ServiceUser, ServiceFriendship)",0,1,1,1
+userinterface.UI.addfriendship(),2,1,3,3
+userinterface.UI.adduser(),1,1,2,2
+userinterface.UI.biggest_community(),3,1,2,2
+userinterface.UI.communities(),0,1,1,1
+userinterface.UI.deletefriendship(),2,1,3,3
+userinterface.UI.deleteuser(),2,1,3,3
+userinterface.UI.friendsUser(),2,1,3,3
+userinterface.UI.menu(String),1,1,11,11
+userinterface.UI.printFriendships(),0,1,1,1
+userinterface.UI.printUsers(),0,1,1,1
+userinterface.UI.show(),3,3,3,3
+userinterface.UI.updateuser(),2,1,3,3
+
+Class,OCavg,OCmax,WMC
+Main,"1,00",1,1
+domain.Entity,"1,00",1,2
+domain.Friendship,"1,00",1,4
+domain.Pair,"1,12",2,9
+domain.Tuple,"1,12",2,9
+domain.User,"1,00",1,6
+domain.validation.FriendshipValidator,"2,00",2,2
+domain.validation.UserValidator,"5,00",5,5
+domain.validation.ValidationException,"1,00",1,5
+repository.database.FriendshipDbRepository,"2,00",4,16
+repository.database.UserDbRepository,"2,17",3,13
+repository.file.AbstractFileRepository,"1,71",3,12
+repository.file.FriendshipFile,"1,00",1,3
+repository.file.UserFile,"1,00",1,3
+repository.memory.InMemoryRepository,"2,00",3,12
+service.Network,"2,43",4,17
+service.ServiceFriendship,"3,00",6,12
+service.ServiceUser,"2,50",5,20
+userinterface.UI,"1,23",3,16
+
+Package,v(G)avg,v(G)tot
+,"1,00",1
+domain,"1,21",34
+domain.validation,"1,71",12
+repository.database,"2,79",39
+repository.file,"2,00",26
+repository.memory,"2,00",12
+service,"2,89",55
+userinterface,"2,85",37
+
+Module,v(G)avg,v(G)tot
+Retea de socializare,"2,14",216
+
+Project,v(G)avg,v(G)tot
+project,"2,14",216
+

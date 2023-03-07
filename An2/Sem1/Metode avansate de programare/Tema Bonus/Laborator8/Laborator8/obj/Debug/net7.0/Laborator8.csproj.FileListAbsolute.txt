@@ -1,0 +1,15 @@
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\bin\Debug\net7.0\Laborator8.exe
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\bin\Debug\net7.0\Laborator8.deps.json
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\bin\Debug\net7.0\Laborator8.runtimeconfig.json
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\bin\Debug\net7.0\Laborator8.dll
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\bin\Debug\net7.0\Laborator8.pdb
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.csproj.AssemblyReference.cache
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.GeneratedMSBuildEditorConfig.editorconfig
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.AssemblyInfoInputs.cache
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.AssemblyInfo.cs
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.csproj.CoreCompileInputs.cache
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.dll
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\refint\Laborator8.dll
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.pdb
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\Laborator8.genruntimeconfig.cache
+E:\Facultate\An2\Sem1\Metode avansate de programare\Teme\Tema Bonus\Laborator8\Laborator8\obj\Debug\net7.0\ref\Laborator8.dll

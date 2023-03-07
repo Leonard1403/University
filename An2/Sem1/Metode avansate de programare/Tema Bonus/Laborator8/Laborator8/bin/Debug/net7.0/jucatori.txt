@@ -1,0 +1,4 @@
+1;1;12;Participat
+2;1;8;Rezerva
+3;2;14;Participat
+4;2;5;Rezerva

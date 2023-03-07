@@ -1,0 +1,9 @@
+unnamed package
+com.example.social_network_gui_v2.domain
+com.example.social_network_gui_v2.domain.validation
+com.example.social_network_gui_v2.repository
+com.example.social_network_gui_v2.repository.database
+com.example.social_network_gui_v2.unused.file
+com.example.social_network_gui_v2.repository.memory
+com.example.social_network_gui_v2.service
+userinterface
