@@ -1,0 +1,2 @@
+1. In this directory, you can find an example of connection via UDP protocol, with both server and client implemented in the C programming language. [click_me](https://github.com/Leonard1403/University/tree/master/An2/Sem1/Retele%20de%20calculatoare/Test)
+2. The 'proiect' folder contains a project done in Cisco Packet Tracer. [click_me](https://github.com/Leonard1403/University/tree/master/An2/Sem1/Retele%20de%20calculatoare/Proiect)

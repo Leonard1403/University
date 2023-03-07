@@ -1,0 +1,2 @@
+![poza1](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Retele%20de%20calculatoare/Proiect/1.png)
+![poza2](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Retele%20de%20calculatoare/Proiect/topologie.png)
