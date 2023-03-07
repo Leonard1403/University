@@ -1,0 +1,74 @@
+%a. Sa se scrie un predicat care intoarce reuniunea a doua multimi.
+%a------------------------------------------
+
+%(i,i)
+%Apartine unei liste
+apare([H|_],H):-!.
+apare([_|T],Elem):-
+    apare(T,Elem).
+
+%(i,i,o)
+%Se intoarce lista
+invers([],Rez,Rez):-!.
+invers([H|T],T2,Rez):-
+    invers(T,[H|T2],Rez).
+
+%(i,i,o)
+reuniune([],Rez,Rez):-
+    %print(L),
+    !.
+reuniune([H1|T1],T2,Rez):-
+    not(apare(T2,H1)),
+    !,
+    reuniune(T1,[H1|T2],Rez).
+reuniune([_|T1],T2,Rez):-
+    reuniune(T1,T2,Rez).
+
+%(i,i,o)
+start([H1|T1],[H2|T2],Rez):-
+    invers([H1|T1],[],Rez1),
+    %print(Rez1),nl,
+    %invers([H2|T2],[],Rez2),
+    %print(Rez2),nl,
+    reuniune(Rez1,[H2|T2],Rez).
+    %print(Rez),nl.
+
+
+%b. Sa se scrie un predicat care, primind o lista, intoarce multimea
+%tuturor perechilor din lista. De ex, cu [a, b, c, d] va produce
+%[[a, b], [a, c], [a, d], [b, c], [b, d], [c, d]].
+%b------------------------------------------
+
+%(i,i,o)
+%Se creeaza perechi de liste
+pereche([],_,[]):-!.
+pereche([H|T],Element,[[Element,H]|T2]):-
+    !,
+    pereche(T,Element,T2).
+
+%(i,i,o)
+%Se adauga in lista [] lista Rez
+add_lista(Rez,[],Rez):-!.
+add_lista([H|T],[H2|T2],[H2|T3]):-
+    add_lista([H|T],T2,T3).
+
+
+%(i,i,o)
+%Program de start
+start2([_],Rezultat,Rezultat):-
+    %print(Rezultat),
+    !.
+start2([H|T],Lista,Rezultat):-
+    %write('intrat'),nl,
+    %print(Lista),nl,
+    %print(Rez),nl,
+    pereche(T,H,Rez2),
+    add_lista(Rez2,Lista,Rez),
+    start2(T,Rez,Rezultat).
+
+%(i,o)
+%Program de start cu initializare
+startAux([H|T],Rez):-
+    start2([H|T],[],Rez).
+
+

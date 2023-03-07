@@ -1,0 +1,55 @@
+freq(_,[],0):-!.
+freq(E,[E|T],R):-
+    !,
+    freq(E,T,R1),
+    R is R1+1.
+freq(E,[_|T],R):-
+    freq(E,T,R).
+
+inversa([],Rez,Rez).
+
+inversa([H|T],Rez,List):-
+    inversa(T,Rez,[H|List]).
+
+inversa_fun(List,Rez):-
+    inversa(List,Rez,[]).
+
+
+transformaMultime([],R,R):-!.
+transformaMultime([H|T],L,Rez):-
+    write("intrat1\n"),
+
+    write("Lista: "),
+    print([H|T]),
+    write("\n"),
+
+    write("Rezultat: "),
+    print(L),
+    write("\n"),
+
+    write("\n"),
+
+    freq(H,T,F),
+    F =:= 0,
+    !,
+    print(H),
+    write(" e 0\n"),
+
+    invers
+    transformaMultime(T,[L|H],Rez).
+
+transformaMultime([E|T],R,Rez):-
+    write("intrat2\n"),
+
+    write("Lista: "),
+    print([E|T]),
+    write("\n"),
+
+    write("Rezultat: "),
+    print(R),
+    write("\n"),
+
+    write("\n"),
+
+    transformaMultime(T,R,Rez).
+
