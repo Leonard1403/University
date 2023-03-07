@@ -1,0 +1,12 @@
+1) Manager - 
+2) Angajati- 
+3) Magazin -
+4) Clienti - 
+5) Comenzi -
+6) Medicamente - 
+7) Alergii medicamente
+8) Alergii -
+9) Anti Biotic medicamente - 
+10) Anti Biotic - 
+11) Medicamente distribuitori -
+12) Distribuitori -
