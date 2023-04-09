@@ -1,0 +1,23 @@
+MONITORIZARE LIVRARE COMENZI 
+Un serviciu de livrari la domiciliu foloseste o aplicatie prin care managerul monitorizeaza 
+livrarea comenzilor si traseaza rutele de livrare pentru fiecare curier. 
+Aplicatia ofera: 
+	•o fereastra pentru manager, in care acesta poate vedea lista comenzilor de livrare 
+si starea lor (in asteptare, in curs de livrare sau livrate). De asemenea, managerul poate 
+atribui fiecarei comenzi un curier disponibil si poate stabili ruta de livrare pentru acesta. 
+	•câte o fereastra pentru fiecare curier: Curierul poate vedea lista comenzilor de 
+livrare care i-au fost atribuite si ruta de livrare stabilita de manager. Cand curierul ajunge 
+la destinatie pentru a livra comanda, declanseaza un buton "in livrare". 
+Imediat dupa aceasta actiune, managerul poate vedea ca acea comanda este in curs de livrare. 
+Cand curierul livreaza comanda, declanseaza un alt buton "livrat". In urma acestei actiuni, 
+managerul vede ca comanda respectiva este livrata si poate actualiza lista de comenzi in 
+consecinta.
+1. Logare/Autentificare/Delogare
+2. Creeaza cont
+3. Adaugare comanda
+4. Preluare comanda
+5. Vizualizare comanda
+6. Stabilirea rutei 
+7. Vizualizare liste comenzi 
+8. Modificare livrat
+9. Anulare comanda
