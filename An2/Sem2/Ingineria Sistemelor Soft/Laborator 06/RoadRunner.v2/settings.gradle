@@ -1,0 +1,8 @@
+rootProject.name = "RoadRunner_v2"
+include 'aplicatieModel'
+include 'aplicatiePersistance'
+include 'aplicatieFX'
+include 'test'
+include 'Main'
+include 'aplicatieService'
+
