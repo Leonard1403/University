@@ -1,0 +1,41 @@
+-Pb regresie: 
+
+(measures the square of errors)
+MSE = (1/n) * sum((y - y_hat)^2)
+y reprezintă valorile adevărate, y_hat reprezintă valorile 
+prezise și n este numărul de exemple de antrenament.
+
+(Mean Absolute Error)
+MAE = (1/n) * sum(|y - y_hat|)
+y reprezintă valorile adevărate, y_hat reprezintă valorile 
+prezise și n este numărul de exemple de antrenament
+
+
+
+-Pb clasificare binara:
+(binary crossentropy)
+BCE = -(1/n) * sum(y*log(y_hat) + (1-y)*log(1-y_hat))
+y reprezintă valorile adevărate (0 sau 1), y_hat reprezintă valorile 
+prezise și n este numărul de exemple de antrenament.
+
+Hinge = (1/n) * sum(max(0, 1 - y*y_hat))
+y reprezintă valorile adevărate (-1 sau 1), y_hat reprezintă 
+valorile prezise 
+și n este numărul de exemple de antrenament.
+
+
+
+-Pb clasificare multi-clasa
+
+CCE = -(1/n) * sum(sum(y * log(y_hat)))
+y reprezintă valorile adevărate (reprezentate sub formă 
+de vectori one-hot encoding), y_hat reprezintă valorile 
+prezise și n este numărul de exemple de antrenament.
+
+
+
+-Pb clasificare multi-label
+(binary cross-entropy)
+BCE = -(1/n) * sum(y*log(y_hat) + (1-y)*log(1-y_hat))
+y reprezintă valorile adevărate (0 sau 1), y_hat reprezintă valorile 
+prezise și n este numărul de exemple de antrenament.

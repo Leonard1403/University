@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "emoji-datasource": "^15.0.0",
+    "emoji-datasource-facebook": "^15.0.0"
+  }
+}
