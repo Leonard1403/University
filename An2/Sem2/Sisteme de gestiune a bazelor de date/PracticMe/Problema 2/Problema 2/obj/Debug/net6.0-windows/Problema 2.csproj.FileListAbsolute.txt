@@ -1,0 +1,24 @@
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\Problema 2.exe
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\Problema 2.deps.json
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\Problema 2.runtimeconfig.json
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\Problema 2.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\Problema 2.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.csproj.AssemblyReference.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema_2.Form1.resources
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.csproj.GenerateResource.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.AssemblyInfoInputs.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.AssemblyInfo.cs
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.csproj.CoreCompileInputs.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.csproj.CopyComplete
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\refint\Problema 2.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\Problema 2.genruntimeconfig.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\PracticMe\Problema 2\Problema 2\obj\Debug\net6.0-windows\ref\Problema 2.dll

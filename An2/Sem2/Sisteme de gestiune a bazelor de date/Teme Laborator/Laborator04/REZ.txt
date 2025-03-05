@@ -1,0 +1,4 @@
+Deadlock - DA
+DirtyReads - NU
+NonRepetableReads - DA
+PhantomReads - DA

@@ -1,0 +1,84 @@
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.exe
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.deps.json
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.runtimeconfig.json
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.pdb
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.AssemblyReference.cache
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri_221_2023.Form1.resources
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.GenerateResource.cache
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.AssemblyInfoInputs.cache
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.AssemblyInfo.cs
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.CoreCompileInputs.cache
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\refint\Jocuri 221 2023.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.pdb
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.genruntimeconfig.cache
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\ref\Jocuri 221 2023.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\andor\source\repos\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.CopyComplete
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.exe
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.deps.json
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.runtimeconfig.json
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Jocuri 221 2023.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Azure.Core.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Azure.Identity.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Memory.Data.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.AssemblyReference.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri_221_2023.Form1.resources
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.GenerateResource.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.GeneratedMSBuildEditorConfig.editorconfig
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.AssemblyInfoInputs.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.AssemblyInfo.cs
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.CoreCompileInputs.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.csproj.CopyComplete
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\refint\Jocuri 221 2023.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\Jocuri 221 2023.genruntimeconfig.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Seminar 2\Jocuri 221 2023\obj\Debug\net6.0-windows\ref\Jocuri 221 2023.dll

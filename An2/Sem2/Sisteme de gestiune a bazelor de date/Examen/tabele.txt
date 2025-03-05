@@ -1,0 +1,6 @@
+Fie o bază de date cu 3 tabele  ce au dimensiunile  prezentate în tabelul următor. De asemenea, fiecare pagină de date  conţine 100 înregistrări şi sunt 102 pagini de memorie disponibile în  buffer.
+
+Tabele | Dim(pagini)
+T1  | 100
+T2 | 1000
+T3 | 5000

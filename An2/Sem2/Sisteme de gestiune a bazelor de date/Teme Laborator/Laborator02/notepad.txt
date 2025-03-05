@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectionStrings>
+    <add name="cn" connectionString="Data Source=DESKTOP-UIQ2NDG;Initial Catalog=Farmacie;Integrated Security=true;TrustServerCertificate=true;"/>
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <appSettings>
+    <add key="ParentTableName" value="Clienti"/>
+    <add key="ChildTableName" value="Comenzi"/>
+    <add key="ChildNumberOfColumns" value="4"/>
+    <add key="ParentNumberOfColumns" value="3"/>
+    <add key="ParentColumnNames" value="idClient,Nume,varsta"/>
+    <add key="ChildColumnNames" value="idComanda,Data_Livrare,numeComenzi,idClient"/>
+    <add key="ColumnNameInsertParameters" value="@data,@ncomenzi,@idclient"/>
+  </appSettings>
+</configuration>
+
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectionStrings>
+    <add name="cn" connectionString="Data Source=DESKTOP-UIQ2NDG;Initial Catalog=Farmacie;Integrated Security=true;TrustServerCertificate=true;"/>
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <appSettings>
+    <add key="ParentTableName" value="Clienti"/>
+    <add key="ChildTableName" value="Medicamente"/>
+    <add key="ChildNumberOfColumns" value="5"/>
+    <add key="ParentNumberOfColumns" value="3"/>
+    <add key="ParentColumnNames" value="idClient,Nume,varsta"/>
+    <add key="ChildColumnNames" value="idMedicament,Nume,Cantitate,Pret,idClient"/>
+    <add key="ColumnNameInsertParameters" value="@data,@ncomenzi,@idclient"/>
+  </appSettings>
+</configuration>
+
+Important! 
+Pe prima si ultima coloana trebuia sa fie id-uri

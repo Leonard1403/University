@@ -1,0 +1,13 @@
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CopyComplete
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\System.Data.SqlClient.dll
+E:\Facultate\An2\Sem2\Sisteme de gestiune a bazelor de date\Teme Laborator\Laborator04\C#\ConsoleApplication1\ConsoleApplication1\bin\Debug\System.Data.SqlClient.xml

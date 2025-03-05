@@ -1,0 +1,11 @@
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\bin\Debug\practicSGBD.exe.config
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\bin\Debug\practicSGBD.exe
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\bin\Debug\practicSGBD.pdb
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.csproj.AssemblyReference.cache
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.Properties.Resources.resources
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.csproj.GenerateResource.cache
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.csproj.CoreCompileInputs.cache
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.exe
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.pdb
+C:\Users\Marius Andreiasi\RiderProjects\practicSGBD\practicSGBD\obj\Debug\practicSGBD.Form1.resources
