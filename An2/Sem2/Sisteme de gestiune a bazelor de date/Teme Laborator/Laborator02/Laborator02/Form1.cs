@@ -10,6 +10,7 @@ namespace Laborator01
         string connectionString = @"Data Source=DESKTOP-UIQ2NDG;
         Initial Catalog=Farmacie;Integrated Security=true;TrustServerCertificate=true;";
         */
+
         string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
 
         DataSet ds = new DataSet();

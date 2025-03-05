@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RjB3lXVpKd6sSQCwoleESYczlrvW0Ap12JcpKD0Q4k/9i/uu+k+pP+k6Q4f97JVpBW1LIcmfUmCN2LLoZ1C4Pg==",
+  "dgSpecHash": "KSIyYKjZltDn+OUPCCLA8D2C7IBb4aM/GkNkfTaDVaurRfgWFjb7pTZg5fejcPkfRfxmYZGOexRflsY79tq1nQ==",
   "success": true,
-  "projectFilePath": "E:\\Facultate\\An2\\Sem2\\Sisteme de gestiune a bazelor de date\\Teme Laborator\\Laborator02\\Laborator02\\Laborator02.csproj",
+  "projectFilePath": "D:\\Facultate\\GitHub\\University\\An2\\Sem2\\Sisteme de gestiune a bazelor de date\\Teme Laborator\\Laborator02\\Laborator02\\Laborator02.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\balin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\balin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -43,11 +43,7 @@
     "C:\\Users\\balin\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\balin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\balin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\balin\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\balin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\balin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\balin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\balin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512"
+    "C:\\Users\\balin\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
