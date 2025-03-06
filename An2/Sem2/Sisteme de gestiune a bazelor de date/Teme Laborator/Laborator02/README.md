@@ -12,3 +12,5 @@ When the form loads, data from both tables is loaded into a `DataSet`, the relat
 - **Add** a record for a client
 
 After each operation, the data is reloaded into the `DataSet`.
+
+![GUI](1.png)
