@@ -14,3 +14,5 @@ When the form loads, data from both tables is loaded into a `DataSet`, the relat
 After each operation, the data is reloaded into the `DataSet`.
 
 ![GUI](1.png)
+
+![DB](2.png)
