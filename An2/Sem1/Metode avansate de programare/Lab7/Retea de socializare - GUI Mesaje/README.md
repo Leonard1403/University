@@ -1,16 +1,30 @@
-Project made in Java with graphical interface made in JavaFX.
+# Java Project with JavaFX UI
 
-Description:
-The project has a graphical interface for sign-in. The client logs in with the data stored in the database. In case the client doesn't have an account, they can create a new one by clicking on the sign-in button. After clicking the button, the authentication data is entered, and then the client is saved in the database. Later on, the client can connect to the database.
+**Description**  
+This project includes a graphical interface for signing in (authentication). The client logs in with data stored in a database. If the client does not have an account, they can create a new one by clicking the "sign-in" button, entering their data, and then saving the new client to the database. Later, the client can connect to the database.
 
-![poza1](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/1.png)
-![poza2](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/2.png)
-![poza3](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/3.png)
+![Sign-In Screen 1](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/1.png)
+![Sign-In Screen 2](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/2.png)
+![Sign-In Screen 3](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/3.png)
 
-The client has the possibility to search for a user in the application's user list, can delete a friendship, or accept a received friendship request. Behind each requirement explained in this paragraph, there is an observer that watches over all users connected to the platform, making a change in each window when something happens in one of the windows.
+---
 
-![poza4](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/4.png)
+## Features
 
-Additionally, users can communicate with each other through messages using a chatbox.
+- **User Search**: A client can look up other users in the application’s user list.  
+- **Friendship Management**: Clients can delete a friendship or accept a received friendship request.  
+- **Real-Time Updates**: An observer monitors all users connected to the platform, so any change (in one window) is immediately reflected across all the other windows.  
+- **Messaging**: Users can communicate with each other via a chatbox.
 
-![poza6](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/6.png)
+![Friend Management](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/4.png)
+![Chatbox Example](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/6.png)
+
+---
+
+## Architecture
+
+Below is the multi-layer (MVC) structure used in the project:
+
+![MVC Architecture](https://github.com/Leonard1403/University/blob/master/An2/Sem1/Metode%20avansate%20de%20programare/Lab7/7.png)
+
+This design separates the logic into **Model**, **View**, and **Controller** layers, making the application modular and easier to maintain.
